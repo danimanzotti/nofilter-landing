@@ -21,6 +21,7 @@ h3{
 
 .content-wrapper{
     max-width: 1106px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -41,6 +42,10 @@ h3{
     font-weight: 500; 
 }
 
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
 /***** Header Styles *****/
 
@@ -68,6 +73,66 @@ header a{
     font-weight: 400; 
     color: #000;
     text-decoration: none;
+}
+
+/***** Hero Styles *****/
+
+.hero{
+    height: 618px;
+    display: flex;
+    position: relative;
+}
+
+.hero .left{
+    width: 57%;
+    height: 100%;
+}
+
+.hero .right{
+    width: 43%;
+    height: 100%;
+    background-image: url(/img/hero-image.jpeg);
+    background-size: cover;
+}
+
+.hero .content-wrapper{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero .main-description{
+    width: 436px;
+}
+
+.hero .main-description .text{
+    text-align: left;
+    margin-top: 24px;
+}
+
+.hero .main-description .app-store-buttons-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 56px;
+}
+
+.hero .main-description .app-store-button{
+    height: 60px;
+}
+
+.hero .main-description .google-play{
+    margin-left: 24px;
+}
+
+.floating-image{
+    position: absolute;
+    height: 80%;
+    left: 57%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /***** Features Styles *****/
@@ -108,6 +173,101 @@ header a{
     margin-bottom: 16px;
 }
 
-.features-item h3,.description{
+.features-item h3,.text{
     text-align: center;
+}
+
+/***** Social Feature Styles *****/
+
+.social-feature{
+    height: 508px;
+    display: flex;
+}
+
+.social-feature .left{
+    position: relative;
+    width: 50%;
+}
+
+.social-feature .left .profile{
+    width: 322px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10);
+    position: absolute;
+    right: 0;
+    top: 48px;
+}
+
+.social-feature .left .home{
+    width: 222px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10);
+    position: absolute;
+    top: 125px;
+    right: 294px;
+}
+
+.social-feature .right{
+    width: 50%;
+    display: flex;
+    align-items: center
+}
+
+.social-feature .right .social-feature-description{
+    max-width: 553px;
+    padding-left: 130px;
+}
+
+.social-feature .right .social-feature-description h2{
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.social-feature .right .social-feature-description .text{
+    text-align: left;
+}
+
+/***** Join Today Styles *****/
+
+.join-today{
+    position: relative;
+    background-color: #000;
+    padding: 96px 0;
+}
+
+.join-today h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.join-today .app-store-buttons-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.join-today .app-store-button{
+    height: 50px;
+}
+
+.join-today .google-play{
+    margin-left: 16px;
+}
+
+/***** Footer Styles *****/
+
+footer{
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 32px 0;
+    border-top: 1px solid #969696;
+}
+
+footer .content-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom-navigation ul li{
+    display: inline;
+    margin-right: 32px;
 }
