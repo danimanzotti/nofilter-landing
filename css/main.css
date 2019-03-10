@@ -359,7 +359,7 @@ footer .bottom-navigation ul li{
     }
 
     .features .features-wrapper .features-item{
-       max-width: 550px;
+       max-width: 450px;
        margin: 48px auto 0;
     }
 
@@ -563,6 +563,10 @@ footer .bottom-navigation ul li{
 }
 
 @media (max-width: 400px){
+
+    .content-wrapper{
+        padding: 0 14px;
+    }
     .social-feature .images .home {
         width: 146px;
         transform: translateX(-110%)
