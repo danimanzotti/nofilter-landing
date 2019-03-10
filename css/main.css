@@ -23,6 +23,7 @@ h3{
     max-width: 1106px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 32px;
 }
 
 h1{
@@ -83,12 +84,12 @@ header a{
     position: relative;
 }
 
-.hero .left{
+.hero .empty{
     width: 57%;
     height: 100%;
 }
 
-.hero .right{
+.hero .image{
     width: 43%;
     height: 100%;
     background-image: url(/img/hero-image.jpeg);
@@ -121,18 +122,24 @@ header a{
 
 .hero .main-description .app-store-button{
     height: 60px;
+    max-width: unset;
 }
 
 .hero .main-description .google-play{
     margin-left: 24px;
 }
 
-.floating-image{
+.hero .floating-image{
     position: absolute;
     height: 80%;
     left: 57%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.hero .floating-image img{
+    height: 100%;
+    max-width: unset;
 }
 
 /***** Features Styles *****/
@@ -147,33 +154,33 @@ header a{
     margin-bottom: 56px;
 }
 
-.features-wrapper{
+.features .features-wrapper{
     display: flex;
     justify-content: space-between;
 }
 
-.features-item{
+.features .features-wrapper .features-item{
     flex: 1;
-    padding: 0 34px;
+    padding: 0 24px;
 }
 
-.create-collections{
+.features .features-wrapper .features-item.create-collections{
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
 }
 
-.features-item i{
+.features .features-wrapper .features-item i{
     width: 100%;
     font-size: 48px;
     text-align: center;
     margin-bottom: 24px;
 }
 
-.features-item h3{
+.features .features-wrapper .features-item h3{
     margin-bottom: 16px;
 }
 
-.features-item h3,.text{
+.features .features-wrapper .features-item h3,.text{
     text-align: center;
 }
 
@@ -184,12 +191,12 @@ header a{
     display: flex;
 }
 
-.social-feature .left{
+.social-feature .images{
     position: relative;
     width: 50%;
 }
 
-.social-feature .left .profile{
+.social-feature .images .profile{
     width: 322px;
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10);
     position: absolute;
@@ -197,7 +204,7 @@ header a{
     top: 48px;
 }
 
-.social-feature .left .home{
+.social-feature .images .home{
     width: 222px;
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10);
     position: absolute;
@@ -205,23 +212,24 @@ header a{
     right: 294px;
 }
 
-.social-feature .right{
+.social-feature .content{
     width: 50%;
     display: flex;
     align-items: center
 }
 
-.social-feature .right .social-feature-description{
+.social-feature .content .social-feature-description{
     max-width: 553px;
     padding-left: 130px;
+    padding-right: 32px;
 }
 
-.social-feature .right .social-feature-description h2{
+.social-feature .content .social-feature-description h2{
     text-align: left;
     margin-bottom: 24px;
 }
 
-.social-feature .right .social-feature-description .text{
+.social-feature .content .social-feature-description .text{
     text-align: left;
 }
 
@@ -270,4 +278,302 @@ footer .content-wrapper{
 footer .bottom-navigation ul li{
     display: inline;
     margin-right: 32px;
+}
+
+
+/***** Media Queries Styles *****/
+
+@media (max-width: 1200px){
+
+    .hero .empty{
+        width: 72%;
+    }
+        
+    .hero .image{
+        width: 28%;
+    }
+
+    .hero .floating-image{
+        left: 72%;
+    }
+
+    .social-feature .images .home{
+        width: 200px;
+        top: 157px;
+        right: 180px;
+    }
+
+    .social-feature .images .profile{
+        width: 300px;
+    }
+
+    .social-feature .content .social-feature-description{
+        padding-left: 60px;
+    }
+
+}
+
+@media (max-width: 862px){
+
+    .hero{
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .hero .empty{
+        width: 100%;
+        height: 508px;
+    }
+    
+    .hero .image{
+        width: 100%;
+        height: 210px;
+    }
+
+    .hero .content-wrapper{
+        height: auto;
+        top: 90px;
+    }
+    
+    .hero .main-description .app-store-buttons-wrapper{
+        margin-top: 40px;
+    }
+
+    .hero .main-description .app-store-button{
+        height: 50px;
+    }
+
+    .hero .floating-image{
+        left: auto;
+        right: 24px;
+        transform: translatey(-50%);
+        height: 460px;
+    }
+
+    .features h2{
+        margin-bottom: 48px;
+    }
+
+    .features .features-wrapper{
+        display: block;
+    }
+
+    .features .features-wrapper .features-item{
+       max-width: 550px;
+       margin: 48px auto 0;
+    }
+
+    .features .features-wrapper .features-item.create-collections{
+        border-left: none;
+        border-right: none;
+    }
+}
+
+
+@media (max-width: 760px){
+
+    h1{
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    h2{
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    h3{
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    header{
+        height: 72px;
+    }
+    
+    header img{
+        height: 40px;
+    }
+
+    .hero .empty {
+        height: 370px;
+    }
+
+    .hero .content-wrapper {
+        top: 56px;
+    }
+
+    .hero .main-description {
+        width: 380px;
+    }
+
+    .hero .main-description .text{
+        margin-top: 16px;
+    }
+
+    .hero .main-description .app-store-buttons-wrapper{
+        margin-top: 32px;
+    }
+
+    .hero .main-description .app-store-button{
+        height: 40px;
+    }
+
+    .hero .main-description .google-play{
+        margin-left: 16px;
+    }
+
+    .hero .floating-image {
+        height: 400px;
+    }   
+
+    .features {
+        padding: 56px 0;
+    }
+
+    .social-feature {
+        height: 360px;
+    }
+
+    .social-feature .images {
+        width: 40%;
+    }
+
+    .social-feature .images .home {
+        top: 110px;
+    }
+
+    .social-feature .images .profile {
+        width: 260px;
+        top: 32px;
+    }
+
+    .social-feature .content {
+        width: 60%;
+    }
+
+    .join-today {
+        padding: 56px 0;
+    }
+
+    .join-today h2 {
+        margin-bottom: 24px;
+    }
+
+    .join-today .app-store-button {
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 650px){
+
+    .content-wrapper{
+        padding: 0 24px;
+    }
+
+    header a.contact{
+        display: none;
+    }
+
+    .hero .floating-image {
+        height: 360px;
+        top: 426px;
+        right: 16px;
+    }
+
+    .social-feature .images .profile {
+        width: 210px;
+        top: 32px;
+    }
+
+    .social-feature .content {
+        width: 65%;
+    }
+
+    .social-feature .content .social-feature-description {
+        padding-left: 50px;
+    }
+
+    footer{
+        padding: 40px;
+    }
+
+    footer .content-wrapper{
+        display: block;
+        text-align: center;
+    }
+
+    footer .bottom-navigation{
+        margin-bottom: 40px;
+    }
+
+    footer .bottom-navigation ul li{
+        display: block;
+        text-align: center;
+        margin: 0 0 16px;
+    }
+
+}
+
+@media (max-width: 538px){
+
+    .hero .floating-image {
+        height: 250px;
+        top: 478px;
+    }
+
+    .features {
+        padding-bottom: 92px;
+    }
+
+    .social-feature{
+        display: block;
+        height: auto;
+    }
+
+    .social-feature .images {
+        width: 100%;
+    }
+
+    .social-feature .images .home {
+        width: 172px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-105%)
+    }
+
+    .social-feature .images .profile {
+        width: 203px;
+        top: -36px;
+        left: 50%;
+        transform: translateX(-10%)
+    }
+
+    .social-feature .content {
+        width: 100%;
+        padding-top: 372px;
+        padding-bottom: 56px;
+    }
+
+    .social-feature .content .social-feature-description {
+        padding: 0 24px;
+    }
+
+}
+
+@media (max-width: 400px){
+    .social-feature .images .home {
+        width: 146px;
+        transform: translateX(-110%)
+    }
+
+    .social-feature .images .profile {
+        width: 174px;
+        transform: translateX(-8%)
+    }
+
+    .social-feature .content {
+        padding-top: 316px;
+    }
 }
