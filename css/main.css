@@ -26,6 +26,12 @@ h3{
     padding: 0 32px;
 }
 
+.content-wrapper.legal {
+    max-width: 900px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
 h1{
     font-size: 48px;
     line-height: 58px;
@@ -48,10 +54,15 @@ img{
     max-height: 100%;
 }
 
+a:hover{
+    color: #969696;
+}
+
 /***** Header Styles *****/
 
 header{
     height: 84px;
+    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.20);
 }
 
@@ -280,6 +291,82 @@ footer .bottom-navigation ul li{
     margin-right: 32px;
 }
 
+footer a{
+    color: #fff;
+    text-decoration: none; 
+}
+
+
+
+/***** Contact Styles *****/
+
+.contact-background-image{
+    background-image: url(/img/hero-image.jpeg);
+    background-size: cover;
+    background-position: center top;
+    height: calc(100vh - 84px);
+}
+
+.contact-background-color{
+    background-color:rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 84px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-content{
+  text-align: center;
+}
+
+.contact-content h1{
+    color: #fff;
+}
+
+.contact-content a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/***** Privacy policy & Terms of Use Styles *****/
+
+.legal h1{
+    margin-bottom: 32px;
+}
+
+.legal h2,
+.legal h3{
+    margin: 24px 0 16px 0;
+}
+
+.legal h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 16px 0 16px;
+}
+
+.legal p{
+    margin-bottom: 8px;
+}
+
+.legal a {
+    word-break: break-all;
+}
+
+.legal p strong{
+    font-weight: 500;
+}
+
+.legal ul{
+    padding-left: 56px;
+    margin-bottom: 8px;
+}
+
+.legal ul li{
+    list-style-type: circle;
+}
+
+
 
 /***** Media Queries Styles *****/
 
@@ -462,6 +549,11 @@ footer .bottom-navigation ul li{
 
     .join-today .app-store-button {
         height: 40px;
+    }
+
+    .contact-background-image,
+    .contact-background-color{
+        height: calc(100vh - 72px);
     }
 
 }
