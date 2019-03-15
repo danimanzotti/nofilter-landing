@@ -85,6 +85,7 @@ header a{
     font-weight: 400; 
     color: #000;
     text-decoration: none;
+    display: flex;
 }
 
 /***** Hero Styles *****/
@@ -483,11 +484,11 @@ footer a{
     }
 
     .hero .empty {
-        height: 370px;
+        height: 346px;
     }
 
     .hero .content-wrapper {
-        top: 56px;
+        top: 44px;
     }
 
     .hero .main-description {
@@ -612,7 +613,7 @@ footer a{
 
     .hero .floating-image {
         height: 250px;
-        top: 478px;
+        top: 455px;
     }
 
     .features {
@@ -657,8 +658,13 @@ footer a{
 @media (max-width: 400px){
 
     .content-wrapper{
-        padding: 0 14px;
+        padding: 0 14px;  
     }
+    
+    .hero .content-wrapper{
+        top: 32px;  
+    }
+
     .social-feature .images .home {
         width: 146px;
         transform: translateX(-110%)
