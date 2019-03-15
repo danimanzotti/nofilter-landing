@@ -8,7 +8,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-99585548-3');
+      gtag('config', 'UA-99585548-3', {
+        'linker': {
+          'domains': ['no-filter.app', 'trynofilter.com', 'getnofilter.com']
+        }
+      });
     </script>
 
     <meta charset="UTF-8">
