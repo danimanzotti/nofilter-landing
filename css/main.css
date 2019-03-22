@@ -369,6 +369,23 @@ footer a{
 
 
 
+/***** Early Adopters *****/
+.early-adopters p {
+    margin-top: 20px;
+}
+
+.early-adopters .app-store-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.early-adopters .app-store-buttons .app-store-button {
+    padding: 0 20px;
+    max-width: 300px;
+}
+
+
 /***** Media Queries Styles *****/
 
 @media (max-width: 1200px){
