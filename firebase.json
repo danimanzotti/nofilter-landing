@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      ".firebaserc",
+      ".firebase",
+      ".gitignore",
+      "*.json",
+      "*.code-workspace",
+      "**/.*",
+      ".*",
+      "*.log",
+      "*.cache"
+    ],
+    "cleanUrls": true
+  }
+}
