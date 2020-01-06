@@ -21,6 +21,14 @@
       });
     </script>
 
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'OPT_CONTAINER_ID':'GTM-WFWV44P'});</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -53,6 +61,23 @@
           a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+
+    <script>
+      /**
+      * Function that registers a click on an outbound link in Analytics.
+      * This function takes a valid URL string as an argument, and uses that URL string
+      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+      * using 'navigator.sendBeacon' in browser that support it.
+      */
+      var getOutboundLink = function(url, event) {
+        gtag('event', event, {
+          // 'event_category': 'category',
+          // 'event_label': 'label',
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location = url;}
+        });
+      }
+    </script>
 </head>
 
 <body>
@@ -78,11 +103,11 @@
 
                 <div class="app-store-buttons-wrapper">
                     <div class="app-store-button apple-store">
-                        <a href="https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976" target="_blank"><img src="/img/apple-store.png" alt="App Store Button"></a>
+                        <a href="https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976" onclick="getOutboundLink('https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976', 'open_ios_hero'); return false;"><img src="/img/apple-store.png" alt="App Store Button"></a>
                     </div>
 
                     <div class="app-store-button google-play">
-                        <a href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter" target="_blank"><img src="/img/google-play.png" alt="Google Play Button"></a>
+                        <a href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter" onclick="getOutboundLink('https://play.google.com/store/apps/details?id=app.no_filter.nofilter', 'open_android_hero'); return false;"><img src="/img/google-play.png" alt="Google Play Button"></a>
                     </div>
                 </div>
             </div>
@@ -147,11 +172,11 @@
 
             <div class="app-store-buttons-wrapper">
                 <div class="app-store-button apple-store">
-                    <a href="https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976" target="_blank"><img src="/img/apple-store.png" alt="App Store Button"></a>
+                    <a href="https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976" onclick="getOutboundLink('https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976', 'open_ios_footer'); return false;"><img src="/img/apple-store.png" alt="App Store Button"></a>
                 </div>
 
                 <div class="app-store-button google-play">
-                    <a href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter" target="_blank"><img src="/img/google-play.png" alt="Google Play Button"></a>
+                    <a href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter" onclick="getOutboundLink('https://play.google.com/store/apps/details?id=app.no_filter.nofilter', 'open_android_footer'); return false;"><img src="/img/google-play.png" alt="Google Play Button"></a>
                 </div>
             </div>
 
