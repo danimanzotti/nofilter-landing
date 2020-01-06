@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99585548-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-99585548-3', {
+        'linker': {
+          'domains': ['no-filter.app', 'trynofilter.com', 'getnofilter.com']
+        }
+      });
+    </script>
+
+    <script>
+      /**
+      * Function that registers a click on an outbound link in Analytics.
+      * This function takes a valid URL string as an argument, and uses that URL string
+      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+      * using 'navigator.sendBeacon' in browser that support it.
+      */
+      var getOutboundLink = function(url, event) {
+        gtag('event', event, {
+          // 'event_category': 'category',
+          // 'event_label': 'label',
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location = url;}
+        });
+      }
+      </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- https://developers.facebook.com/docs/sharing/webmasters/ -->
+    <meta property="og:title" content="NoFilter" />
+    <meta property="og:url" content="https://no-filter.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Discover amazing photo spots all over the world" />
+    <meta property="og:image" content="https://no-filter.app/img/hero-image.jpeg" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="721" />
+
+    <link rel="stylesheet" href="/css/reseter.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <title>Discover amazing photo spots all over the world</title>
+
+    <!-- Hotjar Tracking Code for https://getnofilter.com -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1390548,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="content-wrapper">
+            <a href="/"><img src="/img/nofilter-logo.png" alt="logo"></a>
+            <a href="/contact" class="contact">Contact us</a>
+        </div>
+      </div>
+
+    <div class="hero">
+        <div class="empty"></div>
+
+        <div class="image"></div>
+
+        <div class="content-wrapper">
+            <div class="main-description">
+                <h1>Amazing spots.
+                    <br>
+                    Amazing pictures.
+                </h1>
+                <div class="text">NoFilter helps you discover great photo spots all over the world for experiencing and capturing unique moments.</div>
+
+                <div class="app-store-buttons-wrapper">
+                    <div class="app-store-button apple-store">
+                        <a href="https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976" onclick="getOutboundLink('https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976', 'test_open_ios_1'); return false;" target="_blank"><img src="/img/apple-store.png" alt="App Store Button"></a>
+                    </div>
+
+                    <div class="app-store-button google-play">
+                        <a href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter" onclick="getOutboundLink('https://play.google.com/store/apps/details?id=app.no_filter.nofilter', 'test_open_android_1'); return false;" target="_blank"><img src="/img/google-play.png" alt="Google Play Button"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-image">
+            <img src="/img/cell-phone-hero.png" alt="cell phone">
+        </div>
+
+    </div>
+
+    <div class="features">
+        <div class="content-wrapper">
+
+            <h2>With NoFilter you can</h2>
+
+            <div class="features-wrapper">
+                <div class="features-item get-details">
+                    <i class="material-icons">place</i>
+                    <h3>Get details</h3>
+                    <div class="text">Find out the exact location of where a photo was taken and access the specifics of the camera settings.</div>
+                </div>
+
+                <div class="features-item create-collections">
+                    <i class="material-icons">bookmark_border</i>
+                    <h3>Create collections</h3>
+                    <div class="text">Save spots you love in collections for creative inspiration or use them to spark future trips–and keep them at hands-reach.</div>
+                </div>
+
+                <div class="features-item share-your-story">
+                    <i class="material-icons">photo_camera</i>
+                    <h3>Share your story</h3>
+                    <div class="text">Keep a log of your travels by sharing your own photos and by marking spots that you have visited.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-feature">
+        <div class="images">
+            <div class="home">
+                <img src="/img/screenshot-home.png" alt="Home Screenshot">
+            </div>
+
+            <div class="profile">
+                <img src="/img/screenshot-profile.png" alt=" Profile Screenshot">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="social-feature-description">
+                <h2>Stay inspired and connected</h2>
+                <div class="text">With a growing community, staying inspired will be easier than ever. Follow friends, photographers and travelers and don’t miss out on anything.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="join-today">
+        <div class="content-wrapper">
+            <h2>Join NoFilter today</h2>
+
+            <div class="app-store-buttons-wrapper">
+                <div class="app-store-button apple-store">
+                    <a href="https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976" onclick="getOutboundLink('https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976', 'test_open_ios_2'); return false;" target="_blank"><img src="/img/apple-store.png" alt="App Store Button"></a>
+                </div>
+
+                <div class="app-store-button google-play">
+                    <a href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter" onclick="getOutboundLink('https://play.google.com/store/apps/details?id=app.no_filter.nofilter', 'test_open_android_2'); return false;" target="_blank"><img src="/img/google-play.png" alt="Google Play Button"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content-wrapper">
+            <div class="bottom-navigation">
+                <ul>
+                    <li><a href="/terms-of-use">Terms of use</a></li>
+                    <li><a href="/privacy-policy">Privacy policy</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">© 2019 NoFilter</div>
+        </div>
+      </div>
+
+
+</body>
+</html>
