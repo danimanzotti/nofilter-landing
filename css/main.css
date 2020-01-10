@@ -151,11 +151,16 @@ a:hover{
     left: 57%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
+    box-shadow: inset 230px 100px 150px #000;
+    border-radius: 25px;
+  }
 
-.hero .floating-image img{
+  .hero .floating-image img{
     height: 100%;
     max-width: unset;
+    position: relative;
+    border: 8px solid #040104;
+    border-radius: 25px;
 }
 
 /***** Features Styles *****/
