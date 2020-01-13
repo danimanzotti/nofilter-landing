@@ -77,6 +77,42 @@
           'event_callback': function(){document.location = url;}
         });
       }
+
+      /**
+      * Determine the mobile operating system.
+      * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+      *
+      * @returns {String}
+      */
+      function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+          if (/windows phone/i.test(userAgent)) {
+              return "Windows Phone";
+          }
+
+          if (/android/i.test(userAgent)) {
+              return "Android";
+          }
+
+          // iOS detection from: http://stackoverflow.com/a/9039885/177710
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+              return "iOS";
+          }
+
+          return "unknown";
+      }
+
+      function openDownload() {
+        var device = getMobileOperatingSystem();
+
+        if (device === 'iOS') {
+          document.location = 'https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976';
+        } else if (device === 'Android') {
+          document.location = 'https://play.google.com/store/apps/details?id=app.no_filter.nofilter';
+        }
+      }
     </script>
 </head>
 
@@ -113,7 +149,7 @@
             </div>
         </div>
 
-        <div class="floating-image">
+        <div class="floating-image" onclick="openDownload()">
             <img src="/img/cell-phone-hero.gif" alt="cell phone">
         </div>
 
@@ -147,7 +183,7 @@
     </div>
 
     <div class="social-feature">
-        <div class="images">
+        <div class="images" onclick="openDownload()">
             <div class="home">
                 <img src="/img/screenshot-home.png" alt="Home Screenshot">
             </div>
