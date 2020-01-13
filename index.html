@@ -19,6 +19,8 @@
         },
         'optimize_id': 'GTM-WFWV44P'
       });
+      // Convertion
+      gtag('config', 'AW-991027828');
     </script>
 
     <!-- Anti-flicker snippet (recommended)  -->
@@ -76,6 +78,12 @@
           'transport_type': 'beacon',
           'event_callback': function(){document.location = url;}
         });
+
+        if (event === 'download_app') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-991027828/eOy_CJ2jgboBEPTEx9gD'
+          });
+        }
       }
 
       /**
