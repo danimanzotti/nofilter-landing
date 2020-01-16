@@ -110,6 +110,7 @@ a:hover{
     height: 100%;
     background-image: url(/img/hero-image.jpeg);
     background-size: cover;
+    background-position: center top;
 }
 
 .hero .content-wrapper{
