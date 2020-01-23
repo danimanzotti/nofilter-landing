@@ -1,17 +1,7 @@
 {
   "hosting": {
     "public": "build",
-    "ignore": [
-      ".firebaserc",
-      ".firebase",
-      ".gitignore",
-      "*.json",
-      "*.code-workspace",
-      "**/.*",
-      ".*",
-      "*.log",
-      "*.cache"
-    ],
+    "ignore": [".firebaserc", ".firebase", "**/.*", ".*", "*.log", "*.cache"],
     "rewrites": [
       {
         "source": "**",
