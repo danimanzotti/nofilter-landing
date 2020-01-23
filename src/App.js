@@ -15,10 +15,26 @@ function App() {
       <Header />
 
       <Switch>
-        <Route path="/privacy-policy" component={PrivacyPolicy} />,
-        <Route path="/terms-of-use" component={TermsOfUse} />,
-        <Route path="/contact" component={Contact} />,
-        <Route exact path="/" component={Home} />,
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/terms-of-use" component={TermsOfUse} />
+        <Route path="/contact" component={Contact} />
+        <Route
+          path="/ios"
+          render={() => {
+            const url = 'https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976';
+            window.location.href = url;
+            return <a href={url}>Redirecting to App Store...</a>;
+          }}
+        />
+        <Route
+          path="/android"
+          render={() => {
+            const url = 'https://play.google.com/store/apps/details?id=app.no_filter.nofilter';
+            window.location.href = url;
+            return <a href={url}>Redirecting to Google Play...</a>;
+          }}
+        />
+        <Route exact path="/" component={Home} />
       </Switch>
 
       <Footer />
