@@ -34,7 +34,7 @@ function App() {
             return <a href={url}>Redirecting to Google Play...</a>;
           }}
         />
-        <Route exact path="/" component={Home} />
+        <Route path="/" component={Home} />
       </Switch>
 
       <Footer />
