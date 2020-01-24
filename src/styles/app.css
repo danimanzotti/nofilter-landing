@@ -37,8 +37,8 @@ h3 {
 }
 
 h1 {
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 46px;
+  line-height: 56px;
 }
 
 h2 {
@@ -482,8 +482,8 @@ a:hover {
 
 @media (max-width: 760px) {
   h1 {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   h2 {
@@ -674,6 +674,10 @@ a:hover {
 
   .hero .content-wrapper {
     top: 32px;
+  }
+
+  .hero .main-description .app-store-buttons-wrapper {
+    margin-top: 15px;
   }
 
   .social-feature .images .home {

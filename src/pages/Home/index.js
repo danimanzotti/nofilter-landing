@@ -69,14 +69,10 @@ const Home = () => {
 
         <div className="content-wrapper">
           <div className="main-description">
-            <h1>
-              Amazing spots.
-              <br />
-              Amazing pictures.
-            </h1>
+            <h1>Discover awesome photo spots all over the world.</h1>
             <div className="text">
-              NoFilter helps you discover great photo spots all over the world for experiencing and
-              capturing unique moments.
+              NoFilter helps you discover the best photo spots nearby and helps you to plan your
+              coming trips.
             </div>
 
             <div className="app-store-buttons-wrapper">
@@ -125,8 +121,8 @@ const Home = () => {
               <i className="material-icons">place</i>
               <h3>Get details</h3>
               <div className="text">
-                Find out the exact location of where a photo was taken and access the specifics of
-                the camera settings.
+                Discover a spot that you love, and find out the exact location of where it was taken
+                and access the specifics of the camera settings.
               </div>
             </div>
 
