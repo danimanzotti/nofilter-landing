@@ -7,7 +7,7 @@ import Contact from 'pages/Contact';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import './styles/reseter.css';
-import './styles/app.css';
+import './styles/app.scss';
 
 function App() {
   return (

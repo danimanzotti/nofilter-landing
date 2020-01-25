@@ -1,0 +1,47 @@
+/***** Footer Styles *****/
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 32px 0;
+  border-top: 1px solid #969696;
+
+  @media (max-width: 650px) {
+    padding: 40px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 650px) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .bottom-navigation {
+    @media (max-width: 650px) {
+      margin-bottom: 40px;
+    }
+
+    ul {
+      li {
+        display: inline;
+        margin-right: 32px;
+
+        @media (max-width: 650px) {
+          display: block;
+          text-align: center;
+          margin: 0 0 16px;
+        }
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

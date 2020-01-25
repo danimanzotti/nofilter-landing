@@ -1,0 +1,42 @@
+/***** Header Styles *****/
+
+.header {
+  height: 84px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 760px) {
+    height: 72px;
+  }
+
+  .content-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    height: 50px;
+
+    @media (max-width: 760px) {
+      height: 40px;
+    }
+  }
+
+  a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+
+    &.contact {
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+  }
+}
