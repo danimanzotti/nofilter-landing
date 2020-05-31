@@ -47,15 +47,15 @@
 
       @media (max-width: 862px) {
         height: auto;
-        top: 90px;
+        top: 60px;
       }
 
       @media (max-width: 760px) {
-        top: 44px;
+        top: 40px;
       }
 
       @media (max-width: 400px) {
-        top: 32px;
+        top: 20px;
       }
     }
 
@@ -114,7 +114,7 @@
       }
 
       .app-store-button {
-        height: 60px;
+        height: 55px;
         max-width: unset;
 
         @media (max-width: 862px) {
