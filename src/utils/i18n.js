@@ -5,6 +5,7 @@ import en from './translations/en';
 
 const resources = {
   en: { translation: en },
+  // es: { translation: en },
 };
 
 i18n
@@ -12,6 +13,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    fallbackLng: 'en',
     keySeparator: false,
     interpolation: {
       escapeValue: false,

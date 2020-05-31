@@ -1,9 +1,17 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+import useInterval from '../../hooks/useInterval';
 import './styles.scss';
+
+const TITLES = ['titlePhotographers', 'titleTravelers', 'titleInstagrammers'];
 
 const Home = () => {
   const { t } = useTranslation();
+  const [titleIndex, setTitleIndex] = useState(0);
+
+  useInterval(() => {
+    setTitleIndex(titleIndex + 1 === TITLES.length ? 0 : titleIndex + 1);
+  }, 7000);
   /**
    * Function that registers a click on an outbound link in Analytics.
    * This function takes a valid URL string as an argument, and uses that URL string
@@ -72,12 +80,12 @@ const Home = () => {
 
         <div className="content-wrapper">
           <div className="main-description">
-            <h1>{t('Discover awesome photo spots all over the world')}</h1>
-            <div className="text">
-              {t(
-                'NoFilter helps you discover the best photo spots nearby and helps you to plan your coming trips'
-              )}
-            </div>
+            <h1 key={titleIndex}>
+              <Trans i18nKey={TITLES[titleIndex]}>
+                For <span>photographers</span> who want to discover the best photo spots{' '}
+                <span>nearby</span>
+              </Trans>
+            </h1>
 
             <div className="app-store-buttons-wrapper">
               <div className="app-store-button apple-store">
@@ -118,36 +126,30 @@ const Home = () => {
 
       <div className="features">
         <div className="content-wrapper">
-          <h2>{t('With NoFilter you can')}</h2>
-
           <div className="features-wrapper">
             <div className="features-item get-details">
-              <i className="material-icons">place</i>
-              <h3>{t('Get details')}</h3>
+              <i className="material-icons">add_a_photo</i>
+              <h3>Quantity</h3>
               <div className="text">
-                {t(
-                  'Discover a spot that you love, and find out the exact location of where it was taken and access the specifics of the camera settings'
-                )}
+                NoFilter contains <b>3,500 spots</b> around the world, and{' '}
+                <b>~30 new photos are added every week</b>
               </div>
             </div>
 
             <div className="features-item create-collections">
-              <i className="material-icons">bookmark_border</i>
-              <h3>{t('Create collections')}</h3>
+              <i className="material-icons">no_photography</i>
+              <h3>Quality</h3>
               <div className="text">
-                {t(
-                  'Save spots you love in collections for creative inspiration or use them to spark future trips–and keep them at hands-reach'
-                )}
+                Unlike other apps, all our photos go through a <b>deep quality control</b>. Less
+                than 1% of the photos are approved
               </div>
             </div>
 
             <div className="features-item share-your-story">
-              <i className="material-icons">photo_camera</i>
-              <h3>{t('Share your story')}</h3>
+              <i className="material-icons">local_offer</i>
+              <h3>Price & Support</h3>
               <div className="text">
-                {t(
-                  'Keep a log of your travels by sharing your own photos and by marking spots that you have visited'
-                )}
+                Oh... Yeah... And it's <b>free</b>, and available for <b>Android and iOS</b>
               </div>
             </div>
           </div>
@@ -167,10 +169,14 @@ const Home = () => {
 
         <div className="content">
           <div className="social-feature-description">
-            <h2>Stay inspired and connected</h2>
+            <h2>Our goal</h2>
             <div className="text">
-              With a growing community, staying inspired will be easier than ever. Follow friends,
-              photographers and travelers and don’t miss out on anything.
+              Help <b>photographers and travelers</b> who want to take <b>amazing pictures</b>, by
+              providing an app where they can see cool photo locations, and travel destinations, all
+              around the world.
+              <br />
+              <br />
+              Salud! 🥂
             </div>
           </div>
         </div>

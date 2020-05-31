@@ -9,9 +9,6 @@ const Header = () => {
         <Link to="/">
           <img src="/img/nofilter-logo.png" alt="logo" />
         </Link>
-        {/* <Link to="/contact" className="contact">
-          Contact us
-        </Link> */}
       </div>
     </div>
   );

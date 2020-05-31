@@ -9,6 +9,10 @@
     height: 72px;
   }
 
+  @media (max-width: 425px) {
+    height: 50px;
+  }
+
   .content-wrapper {
     height: 100%;
     display: flex;
@@ -21,6 +25,10 @@
 
     @media (max-width: 760px) {
       height: 40px;
+    }
+
+    @media (max-width: 425px) {
+      height: 30px;
     }
   }
 

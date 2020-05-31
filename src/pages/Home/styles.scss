@@ -1,6 +1,6 @@
 .Home {
   .hero {
-    height: 618px;
+    height: 450px;
     display: flex;
     position: relative;
 
@@ -19,15 +19,11 @@
 
       @media (max-width: 862px) {
         width: 100%;
-        height: 508px;
+        height: 450px;
       }
 
       @media (max-width: 760px) {
-        height: 370px;
-      }
-
-      @media (max-width: 320px) {
-        height: 400px;
+        height: 300px;
       }
     }
 
@@ -77,12 +73,32 @@
         width: 380px;
       }
 
-      .text {
-        text-align: left;
-        margin-top: 24px;
+      h1 {
+        span {
+          position: relative;
+          display: inline-block;
 
-        @media (max-width: 760px) {
-          margin-top: 16px;
+          @keyframes get-full {
+            from {
+              width: 0%;
+            }
+            to {
+              width: 100%;
+            }
+          }
+
+          &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            background-color: #000;
+            animation-name: get-full;
+            animation-duration: 7s;
+          }
         }
       }
 
@@ -158,11 +174,7 @@
 
       @media (max-width: 538px) {
         height: 250px;
-        top: 475px;
-      }
-
-      @media (max-width: 320px) {
-        top: 510px;
+        top: 410px;
       }
 
       img {
