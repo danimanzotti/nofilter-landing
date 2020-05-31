@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './styles.scss';
 
 const Home = () => {
+  const { t } = useTranslation();
   /**
    * Function that registers a click on an outbound link in Analytics.
    * This function takes a valid URL string as an argument, and uses that URL string
@@ -13,7 +15,7 @@ const Home = () => {
       // 'event_category': 'category',
       // 'event_label': 'label',
       transport_type: 'beacon',
-      event_callback: function() {
+      event_callback: () => {
         document.location = url;
       },
     });
@@ -70,10 +72,11 @@ const Home = () => {
 
         <div className="content-wrapper">
           <div className="main-description">
-            <h1>Discover awesome photo spots all over the world.</h1>
+            <h1>{t('Discover awesome photo spots all over the world')}</h1>
             <div className="text">
-              NoFilter helps you discover the best photo spots nearby and helps you to plan your
-              coming trips.
+              {t(
+                'NoFilter helps you discover the best photo spots nearby and helps you to plan your coming trips'
+              )}
             </div>
 
             <div className="app-store-buttons-wrapper">
@@ -115,33 +118,36 @@ const Home = () => {
 
       <div className="features">
         <div className="content-wrapper">
-          <h2>With NoFilter you can</h2>
+          <h2>{t('With NoFilter you can')}</h2>
 
           <div className="features-wrapper">
             <div className="features-item get-details">
               <i className="material-icons">place</i>
-              <h3>Get details</h3>
+              <h3>{t('Get details')}</h3>
               <div className="text">
-                Discover a spot that you love, and find out the exact location of where it was taken
-                and access the specifics of the camera settings.
+                {t(
+                  'Discover a spot that you love, and find out the exact location of where it was taken and access the specifics of the camera settings'
+                )}
               </div>
             </div>
 
             <div className="features-item create-collections">
               <i className="material-icons">bookmark_border</i>
-              <h3>Create collections</h3>
+              <h3>{t('Create collections')}</h3>
               <div className="text">
-                Save spots you love in collections for creative inspiration or use them to spark
-                future trips–and keep them at hands-reach.
+                {t(
+                  'Save spots you love in collections for creative inspiration or use them to spark future trips–and keep them at hands-reach'
+                )}
               </div>
             </div>
 
             <div className="features-item share-your-story">
               <i className="material-icons">photo_camera</i>
-              <h3>Share your story</h3>
+              <h3>{t('Share your story')}</h3>
               <div className="text">
-                Keep a log of your travels by sharing your own photos and by marking spots that you
-                have visited.
+                {t(
+                  'Keep a log of your travels by sharing your own photos and by marking spots that you have visited'
+                )}
               </div>
             </div>
           </div>
@@ -155,7 +161,7 @@ const Home = () => {
           </div>
 
           <div className="profile">
-            <img src="/img/screenshot-profile.png" alt=" Profile Screenshot" />
+            <img src="/img/screenshot-profile.png" alt="Profile Screenshot" />
           </div>
         </div>
 
