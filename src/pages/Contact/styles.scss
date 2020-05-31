@@ -1,8 +1,8 @@
 .Contact {
   .contact-background-image {
-    background-image: url(/img/hero-image.jpeg);
+    background-image: url(https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=80);
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     height: calc(100vh - 84px);
 
     @media (max-width: 760px) {
