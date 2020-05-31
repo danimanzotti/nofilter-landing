@@ -22,7 +22,7 @@ function App() {
         <Route
           path="/ios"
           render={() => {
-            const url = 'https://itunes.apple.com/us/app/nofilter-photo-spots/id1445583976';
+            const url = 'https://apps.apple.com/app/nofilter-photo-spots/id1445583976';
             window.location.href = url;
             return <a href={url}>Redirecting to App Store...</a>;
           }}

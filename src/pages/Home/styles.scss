@@ -427,4 +427,31 @@
       margin-left: 32px;
     }
   }
+
+  .app-store-button {
+    position: relative;
+
+    &:hover {
+      .qr {
+        @media (min-width: 426px) {
+          display: block;
+        }
+      }
+    }
+
+    .qr {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
 }
