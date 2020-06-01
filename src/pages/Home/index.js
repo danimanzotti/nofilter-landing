@@ -88,7 +88,8 @@ const Home = () => {
           }
         } while (!isOk && radius < 20000);
       },
-      error => {
+      () => {
+        setNearMeStatus(NEAR_ME_STATUS.INIT);
         window.alert(
           "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!"
         );
