@@ -9,9 +9,18 @@ import './styles.scss';
 
 const TITLES = ['titlePhotographers', 'titleTravelers', 'titleInstagrammers'];
 
+const NEAR_ME_STATUS = {
+  INIT: 'init',
+  GETTING_GEO: 'getting_geo',
+  GETTING_SPOTS: 'getting_spots',
+  SHOWING: 'showing',
+};
+
 const Home = () => {
   // const { t } = useTranslation();
   const [titleIndex, setTitleIndex] = useState(0);
+  const [nearMeStatus, setNearMeStatus] = useState(NEAR_ME_STATUS.INIT);
+  const [nearMeSpots, setNearMeSpots] = useState([]);
 
   useInterval(() => {
     setTitleIndex(titleIndex + 1 === TITLES.length ? 0 : titleIndex + 1);
@@ -50,6 +59,61 @@ const Home = () => {
       document.location = 'https://apps.apple.com/app/nofilter-photo-spots/id1445583976';
     } else if (device === 'Android') {
       document.location = 'https://play.google.com/store/apps/details?id=app.no_filter.nofilter';
+    }
+  };
+
+  const handleShowNearMe = async () => {
+    if (!navigator.geolocation) {
+      window.alert('Geolocation is not supported by this browser');
+      return;
+    }
+
+    setNearMeStatus(NEAR_ME_STATUS.GETTING_GEO);
+
+    navigator.geolocation.getCurrentPosition(async position => {
+      let radius = 2;
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+
+      setNearMeStatus(NEAR_ME_STATUS.GETTING_SPOTS);
+
+      let isOk = false;
+
+      do {
+        isOk = await getSpots({ lat, lng, radius });
+
+        if (!isOk) {
+          radius = radius * 5;
+        }
+      } while (!isOk && radius < 20000);
+    });
+  };
+
+  const getSpots = async ({ lat, lng, radius }) => {
+    const baseUrl = 'https://us-central1-mari-a5cc7.cloudfunctions.net';
+    const r = await fetch(`${baseUrl}/api/v1/spots/radius/${radius}/${lat}/${lng}`);
+    const { data } = await r.json();
+    const spots = data.spots;
+
+    if (spots.length === 8) {
+      setNearMeStatus(NEAR_ME_STATUS.SHOWING);
+
+      spots.forEach(spot => {
+        if (!spot.url.startsWith('http')) {
+          spot.url = spot.url
+            .replace('{1}', '&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=')
+            .replace('{2}', 'eyJhcHBfaWQiOjIzOTI1fQ&s=')
+            .replace('{3}', '?ixlib=rb-0.3.5');
+
+          spot.url = `https://images.unsplash.com/photo-${spot.url}`;
+        }
+      });
+
+      setNearMeSpots(spots);
+
+      return true;
+    } else {
+      return false;
     }
   };
 
@@ -106,7 +170,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
         <div className="floating-image" onClick={openDownload}>
           {/* <img src="/img/cell-phone-hero.gif" alt="cell phone" /> */}
           <video autoPlay loop muted playsInline>
@@ -121,6 +184,24 @@ const Home = () => {
           <h2>Some examples</h2>
 
           <Slider items={STATIC_EXAMPLES} />
+
+          {nearMeSpots.length > 0 && <Slider items={nearMeSpots} />}
+
+          {nearMeStatus !== NEAR_ME_STATUS.SHOWING && (
+            <button
+              onClick={handleShowNearMe}
+              type="button"
+              disabled={nearMeStatus !== NEAR_ME_STATUS.INIT}
+            >
+              {
+                {
+                  [NEAR_ME_STATUS.INIT]: 'Show me some examples near me!',
+                  [NEAR_ME_STATUS.GETTING_GEO]: 'Getting your location...',
+                  [NEAR_ME_STATUS.GETTING_SPOTS]: 'Getting spots...',
+                }[nearMeStatus]
+              }
+            </button>
+          )}
         </div>
       </div>
 

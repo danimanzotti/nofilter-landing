@@ -3,10 +3,7 @@ import './styles.scss';
 
 const Photo = ({ item }) => (
   <div className="photo-wrapper">
-    <div
-      className="photo"
-      style={{ backgroundImage: `url(${item.photosHydrated[0].urls.regular})` }}
-    />
+    <div className="photo" style={{ backgroundImage: `url(${item.url})` }} />
   </div>
 );
 
@@ -14,7 +11,7 @@ const Slider = ({ items }) => {
   return (
     <div className="Slider">
       {items.map(item => (
-        <Photo key={item.id} item={item} />
+        <Photo key={item.url} item={item} />
       ))}
     </div>
   );
