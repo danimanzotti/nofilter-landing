@@ -108,7 +108,11 @@ const Home = () => {
         </div>
 
         <div className="floating-image" onClick={openDownload}>
-          <img src="/img/cell-phone-hero.gif" alt="cell phone" />
+          {/* <img src="/img/cell-phone-hero.gif" alt="cell phone" /> */}
+          <video autoPlay loop>
+            <source src="/img/app.webm" type="video/webm" />
+            <source src="/img/app.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 
