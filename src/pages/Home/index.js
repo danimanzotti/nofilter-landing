@@ -70,23 +70,30 @@ const Home = () => {
 
     setNearMeStatus(NEAR_ME_STATUS.GETTING_GEO);
 
-    navigator.geolocation.getCurrentPosition(async position => {
-      let radius = 2;
-      const lat = position.coords.latitude;
-      const lng = position.coords.longitude;
+    navigator.geolocation.getCurrentPosition(
+      async position => {
+        let radius = 2;
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
 
-      setNearMeStatus(NEAR_ME_STATUS.GETTING_SPOTS);
+        setNearMeStatus(NEAR_ME_STATUS.GETTING_SPOTS);
 
-      let isOk = false;
+        let isOk = false;
 
-      do {
-        isOk = await getSpots({ lat, lng, radius });
+        do {
+          isOk = await getSpots({ lat, lng, radius });
 
-        if (!isOk) {
-          radius = radius * 5;
-        }
-      } while (!isOk && radius < 20000);
-    });
+          if (!isOk) {
+            radius = radius * 5;
+          }
+        } while (!isOk && radius < 20000);
+      },
+      error => {
+        window.alert(
+          "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!"
+        );
+      }
+    );
   };
 
   const getSpots = async ({ lat, lng, radius }) => {
