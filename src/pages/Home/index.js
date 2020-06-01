@@ -161,11 +161,11 @@ const Home = () => {
       <div className="social-feature">
         <div className="images" onClick={openDownload}>
           <div className="home">
-            <img src="/img/screenshot-home.png" alt="Home Screenshot" />
+            <img src="/img/screenshot-home.jpg" alt="Home Screenshot" />
           </div>
 
           <div className="profile">
-            <img src="/img/screenshot-profile.png" alt="Profile Screenshot" />
+            <img src="/img/screenshot-profile.jpg" alt="Profile Screenshot" />
           </div>
         </div>
 
