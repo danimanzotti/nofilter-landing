@@ -1,39 +1,21 @@
 import React, { useState } from 'react';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
+import Slider from '../../components/Slider';
+import JoinToday from '../../components/JoinToday';
 import useInterval from '../../hooks/useInterval';
+import { getOutboundLink } from '../../utils/links';
+import STATIC_EXAMPLES from './staticExamples';
 import './styles.scss';
 
 const TITLES = ['titlePhotographers', 'titleTravelers', 'titleInstagrammers'];
 
 const Home = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [titleIndex, setTitleIndex] = useState(0);
 
   useInterval(() => {
     setTitleIndex(titleIndex + 1 === TITLES.length ? 0 : titleIndex + 1);
   }, 7000);
-  /**
-   * Function that registers a click on an outbound link in Analytics.
-   * This function takes a valid URL string as an argument, and uses that URL string
-   * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-   * using 'navigator.sendBeacon' in browser that support it.
-   */
-  const getOutboundLink = (url, event) => {
-    window.gtag('event', event, {
-      // 'event_category': 'category',
-      // 'event_label': 'label',
-      transport_type: 'beacon',
-      event_callback: () => {
-        document.location = url;
-      },
-    });
-
-    if (event === 'download_app') {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-991027828/eOy_CJ2jgboBEPTEx9gD',
-      });
-    }
-  };
 
   /**
    * Determine the mobile operating system.
@@ -130,6 +112,16 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="sliders">
+        <div className="content-wrapper">
+          <h2>Some examples</h2>
+
+          <Slider items={STATIC_EXAMPLES} />
+        </div>
+      </div>
+
+      <JoinToday />
+
       <div className="features">
         <div className="content-wrapper">
           <div className="features-wrapper">
@@ -188,47 +180,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="join-today">
-        <div className="content-wrapper">
-          <h2>Join NoFilter today</h2>
-
-          <div className="app-store-buttons-wrapper">
-            <div className="app-store-button apple-store">
-              <a
-                href="https://apps.apple.com/app/nofilter-photo-spots/id1445583976"
-                onClick={() =>
-                  getOutboundLink(
-                    'https://apps.apple.com/app/nofilter-photo-spots/id1445583976',
-                    'download_app'
-                  )
-                }
-              >
-                <img src="/img/apple-store.png" alt="App Store Button" />
-                <div className="qr">
-                  <img src="/img/qr-ios.png" alt="App Store QR Button" />
-                </div>
-              </a>
-            </div>
-
-            <div className="app-store-button google-play">
-              <a
-                href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter"
-                onClick={() =>
-                  getOutboundLink(
-                    'https://play.google.com/store/apps/details?id=app.no_filter.nofilter',
-                    'download_app'
-                  )
-                }
-              >
-                <img src="/img/google-play.png" alt="Google Play Button" />
-                <div className="qr">
-                  <img src="/img/qr-android.png" alt="App Store QR Button" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <JoinToday />
     </div>
   );
 };
