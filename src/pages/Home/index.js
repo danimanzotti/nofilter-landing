@@ -63,7 +63,10 @@ const Home = () => {
   };
 
   const handleShowNearMe = async () => {
+    window.gtag('event', 'show_near_me_click');
+
     if (!navigator.geolocation) {
+      window.gtag('event', 'show_near_me_not_supported');
       window.alert('Geolocation is not supported by this browser');
       return;
     }
@@ -90,6 +93,7 @@ const Home = () => {
       },
       () => {
         setNearMeStatus(NEAR_ME_STATUS.INIT);
+        window.gtag('event', 'show_near_me_error');
         window.alert(
           "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!"
         );
@@ -104,6 +108,7 @@ const Home = () => {
     const spots = data.spots;
 
     if (spots.length === 8) {
+      window.gtag('event', 'show_near_me_shown');
       setNearMeStatus(NEAR_ME_STATUS.SHOWING);
 
       spots.forEach(spot => {
@@ -209,6 +214,10 @@ const Home = () => {
                 }[nearMeStatus]
               }
             </button>
+          )}
+
+          {nearMeStatus === NEAR_ME_STATUS.SHOWING && (
+            <h3>Want to see more? Download the app. It's free!</h3>
           )}
         </div>
       </div>

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 
-const Photo = ({ item }) => (
-  <div className="photo-wrapper">
-    <div className="photo" style={{ backgroundImage: `url(${item.url})` }} />
-  </div>
-);
+const Photo = ({ item }) => {
+  const [showText, setShowText] = useState(false);
+
+  return (
+    <div className="photo-wrapper" onClick={() => setShowText(true)}>
+      <div className="photo" style={{ backgroundImage: `url(${item.url})` }}>
+        {showText && <div className="want">Want to see more? Download the app. It's free!</div>}
+      </div>
+    </div>
+  );
+};
 
 const Slider = ({ items }) => {
   return (
