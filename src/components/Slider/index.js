@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './styles.scss';
 
 const Photo = ({ item }) => {
+  const { t } = useTranslation();
   const [showText, setShowText] = useState(false);
 
   const handleClickOnPhoto = () => {
@@ -12,7 +14,9 @@ const Photo = ({ item }) => {
   return (
     <div className="photo-wrapper" onClick={handleClickOnPhoto}>
       <div className="photo" style={{ backgroundImage: `url(${item.url})` }}>
-        {showText && <div className="want">Want to see more? Download the app. It's free!</div>}
+        {showText && (
+          <div className="want">{t("Want to see more? Download the app. It's free!")}</div>
+        )}
       </div>
     </div>
   );

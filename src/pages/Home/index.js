@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trans } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import Slider from '../../components/Slider';
 import JoinToday from '../../components/JoinToday';
 import useInterval from '../../hooks/useInterval';
@@ -17,7 +17,7 @@ const NEAR_ME_STATUS = {
 };
 
 const Home = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   const [titleIndex, setTitleIndex] = useState(0);
   const [nearMeStatus, setNearMeStatus] = useState(NEAR_ME_STATUS.INIT);
   const [nearMeSpots, setNearMeSpots] = useState([]);
@@ -67,7 +67,7 @@ const Home = () => {
 
     if (!navigator.geolocation) {
       window.gtag('event', 'show_near_me_not_supported');
-      window.alert('Geolocation is not supported by this browser');
+      window.alert(t('Geolocation is not supported by this browser'));
       return;
     }
 
@@ -95,7 +95,9 @@ const Home = () => {
         setNearMeStatus(NEAR_ME_STATUS.INIT);
         window.gtag('event', 'show_near_me_error');
         window.alert(
-          "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!"
+          t(
+            "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!"
+          )
         );
       }
     );
@@ -157,9 +159,9 @@ const Home = () => {
                     )
                   }
                 >
-                  <img src="/img/apple-store.png" alt="App Store Button" />
+                  <img src="/img/apple-store.png" alt={t('App Store Button')} />
                   <div className="qr">
-                    <img src="/img/qr-ios.png" alt="App Store QR Button" />
+                    <img src="/img/qr-ios.png" alt={t('App Store QR Button')} />
                   </div>
                 </a>
               </div>
@@ -174,9 +176,9 @@ const Home = () => {
                     )
                   }
                 >
-                  <img src="/img/google-play.png" alt="Google Play Button" />
+                  <img src="/img/google-play.png" alt={t('Google Play Button')} />
                   <div className="qr">
-                    <img src="/img/qr-android.png" alt="App Store QR Button" />
+                    <img src="/img/qr-android.png" alt={t('Google Play QR Button')} />
                   </div>
                 </a>
               </div>
@@ -194,7 +196,7 @@ const Home = () => {
 
       <div className="sliders">
         <div className="content-wrapper">
-          <h2>Some examples</h2>
+          <h2>{t('Some examples')}</h2>
 
           <Slider items={STATIC_EXAMPLES} />
 
@@ -208,16 +210,16 @@ const Home = () => {
             >
               {
                 {
-                  [NEAR_ME_STATUS.INIT]: 'Show me some examples near me!',
-                  [NEAR_ME_STATUS.GETTING_GEO]: 'Getting your location...',
-                  [NEAR_ME_STATUS.GETTING_SPOTS]: 'Getting spots...',
+                  [NEAR_ME_STATUS.INIT]: t('Show me some examples near me!'),
+                  [NEAR_ME_STATUS.GETTING_GEO]: t('Getting your location...'),
+                  [NEAR_ME_STATUS.GETTING_SPOTS]: t('Getting spots...'),
                 }[nearMeStatus]
               }
             </button>
           )}
 
           {nearMeStatus === NEAR_ME_STATUS.SHOWING && (
-            <h3>Want to see more? Download the app. It's free!</h3>
+            <h3>{t("Want to see more? Download the app. It's free!")}</h3>
           )}
         </div>
       </div>
@@ -229,27 +231,33 @@ const Home = () => {
           <div className="features-wrapper">
             <div className="features-item get-details">
               <i className="material-icons">add_a_photo</i>
-              <h3>Quantity</h3>
+              <h3>{t('Quantity')}</h3>
               <div className="text">
-                NoFilter contains <b>3,500 spots</b> around the world, and{' '}
-                <b>~30 new photos are added every week</b>
+                <Trans i18nKey="featuresQuantity">
+                  NoFilter contains <b>3,500 spots</b> around the world, and{' '}
+                  <b>~30 new photos are added every week</b>
+                </Trans>
               </div>
             </div>
 
             <div className="features-item create-collections">
               <i className="material-icons">no_photography</i>
-              <h3>Quality</h3>
+              <h3>{t('Quality')}</h3>
               <div className="text">
-                Unlike other apps, all our photos go through a <b>deep quality control</b>. Less
-                than 1% of the photos are approved
+                <Trans i18nKey="featuresQuality">
+                  Unlike other apps, all our photos go through a <b>deep quality control</b>. Less
+                  than 1% of the photos are approved
+                </Trans>
               </div>
             </div>
 
             <div className="features-item share-your-story">
               <i className="material-icons">local_offer</i>
-              <h3>Price & Support</h3>
+              <h3>{t('Price and Support')}</h3>
               <div className="text">
-                Oh... Yeah... And it's <b>free</b>, and available for <b>Android and iOS</b>
+                <Trans i18nKey="featuresPrice">
+                  Oh... Yeah... And it's <b>free</b>, and available for <b>Android and iOS</b>
+                </Trans>
               </div>
             </div>
           </div>
@@ -259,21 +267,23 @@ const Home = () => {
       <div className="social-feature">
         <div className="images" onClick={openDownload}>
           <div className="home">
-            <img src="/img/screenshot-home.jpg" alt="Home Screenshot" />
+            <img src="/img/screenshot-home.jpg" alt={t('Home Screenshot')} />
           </div>
 
           <div className="profile">
-            <img src="/img/screenshot-profile.jpg" alt="Profile Screenshot" />
+            <img src="/img/screenshot-profile.jpg" alt={t('Profile Screenshot')} />
           </div>
         </div>
 
         <div className="content">
           <div className="social-feature-description">
-            <h2>Our goal</h2>
+            <h2>{t('Our goal')}</h2>
             <div className="text">
-              Help <b>photographers and travelers</b> who want to take <b>amazing pictures</b>, by
-              providing an app where they can see cool photo locations, and travel destinations, all
-              around the world.
+              <Trans i18nKey="ourGoal">
+                Help <b>photographers and travelers</b> who want to take <b>amazing pictures</b>, by
+                providing an app where they can see cool photo locations, and travel destinations,
+                all around the world.
+              </Trans>
               <br />
               <br />
               Salud! 🥂

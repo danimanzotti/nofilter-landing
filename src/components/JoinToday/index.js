@@ -1,12 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { getOutboundLink } from '../../utils/links';
 import './styles.scss';
 
 const JoinToday = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="JoinToday">
       <div className="content-wrapper">
-        <h2>Join NoFilter today</h2>
+        <h2>{t('Join NoFilter today')}</h2>
 
         <div className="app-store-buttons-wrapper">
           <div className="app-store-button apple-store">
@@ -19,9 +22,9 @@ const JoinToday = () => {
                 )
               }
             >
-              <img src="/img/apple-store.png" alt="App Store Button" />
+              <img src="/img/apple-store.png" alt={t('App Store Button')} />
               <div className="qr">
-                <img src="/img/qr-ios.png" alt="App Store QR Button" />
+                <img src="/img/qr-ios.png" alt={t('App Store QR Button')} />
               </div>
             </a>
           </div>
@@ -36,9 +39,9 @@ const JoinToday = () => {
                 )
               }
             >
-              <img src="/img/google-play.png" alt="Google Play Button" />
+              <img src="/img/google-play.png" alt={t('Google Play Button')} />
               <div className="qr">
-                <img src="/img/qr-android.png" alt="App Store QR Button" />
+                <img src="/img/qr-android.png" alt={t('Google Play QR Button')} />
               </div>
             </a>
           </div>
