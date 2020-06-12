@@ -7,7 +7,7 @@ export default {
     'NoFilterには世界中に<1> 3,500スポット</ 1>が含まれており、<1>毎週約30枚の新しい写真が追加されます</ 1>',
   featuresPrice: 'ああ...ええ...そして<1>無料</ 1>で、<1> AndroidとiOS </ 1>で利用可能です',
   'Geolocation is not supported by this browser': 'このブラウザは位置情報をサポートしていません',
-  'Getting spots...': 'スポットを取得しています...',
+  'Getting photo locations': '写真の場所を取得しています',
   'Getting your location...': '現在地を取得しています...',
   'Google Play Button': 'Google Playボタン',
   'Google Play QR Button': 'Google Play QRボタン',

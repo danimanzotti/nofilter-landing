@@ -7,7 +7,7 @@ export default {
     'NoFilter contains <1>3,500 spots</1> around the world, and around <1>30 new photos are added every week</1>',
   featuresPrice: "Oh... Yeah... And it's <1>free</1>, and available for <1>Android and iOS</1>",
   'Geolocation is not supported by this browser': 'Geolocation is not supported by this browser',
-  'Getting spots...': 'Getting spots...',
+  'Getting photo locations': 'Getting photo locations',
   'Getting your location...': 'Getting your location...',
   'Google Play Button': 'Google Play Button',
   'Google Play QR Button': 'Google Play QR Button',

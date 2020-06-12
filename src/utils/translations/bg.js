@@ -7,7 +7,7 @@ export default {
     'NoFilter съдържа <1> 3500 петна </1> по света, а около <1> 30 нови снимки се добавят всяка седмица </1>',
   featuresPrice: 'О ... да ... И това е <1> безплатно </1> и е достъпно за <1> Android и iOS </1>',
   'Geolocation is not supported by this browser': 'Геолокацията не се поддържа от този браузър',
-  'Getting spots...': 'Получаване на петна ...',
+  'Getting photo locations': 'Получаване на снимки за снимки',
   'Getting your location...': 'Получаване на местоположението ви ...',
   'Google Play Button': 'Google Play Бутон',
   'Google Play QR Button': 'QR бутон на Google Play',

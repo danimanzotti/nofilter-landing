@@ -8,7 +8,7 @@ export default {
   featuresPrice: 'Oh ... Sì ... Ed è <1> gratuito </1> ed è disponibile per <1> Android e iOS </1>',
   'Geolocation is not supported by this browser':
     'La geolocalizzazione non è supportata da questo browser',
-  'Getting spots...': 'Ottenere punti ...',
+  'Getting photo locations': 'Ottenere posizioni fotografiche',
   'Getting your location...': 'Ottenere la tua posizione ...',
   'Google Play Button': 'Pulsante Google Play',
   'Google Play QR Button': 'Pulsante QR di Google Play',

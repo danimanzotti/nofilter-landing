@@ -8,7 +8,7 @@ export default {
   featuresPrice:
     'Oh ... Ya ... Dan itu <1> gratis </1>, dan tersedia untuk <1> Android dan iOS </1>',
   'Geolocation is not supported by this browser': 'Geolokasi tidak didukung oleh browser ini',
-  'Getting spots...': 'Mendapatkan tempat ...',
+  'Getting photo locations': 'Mendapatkan lokasi foto',
   'Getting your location...': 'Mendapatkan lokasi Anda ...',
   'Google Play Button': 'Tombol Google Play',
   'Google Play QR Button': 'Tombol Google Play QR',

@@ -6,7 +6,7 @@ export default {
   featuresQuantity: 'NoFilter包含全球<1> 3,500个景点</ 1>，并且每周大约添加<1> 30张新照片</ 1>',
   featuresPrice: '哦...是的... <1>免费</ 1>，可用于<1> Android和iOS </ 1>',
   'Geolocation is not supported by this browser': '此浏览器不支持地理位置',
-  'Getting spots...': '获得景点...',
+  'Getting photo locations': '获取照片位置',
   'Getting your location...': '正在获取您的位置...',
   'Google Play Button': 'Google Play按钮',
   'Google Play QR Button': 'Google Play QR按钮',

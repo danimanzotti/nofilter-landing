@@ -212,7 +212,7 @@ const Home = () => {
                 {
                   [NEAR_ME_STATUS.INIT]: t('Show me some examples near me!'),
                   [NEAR_ME_STATUS.GETTING_GEO]: t('Getting your location...'),
-                  [NEAR_ME_STATUS.GETTING_SPOTS]: t('Getting spots...'),
+                  [NEAR_ME_STATUS.GETTING_SPOTS]: `${t('Getting photo locations')}...`,
                 }[nearMeStatus]
               }
             </button>

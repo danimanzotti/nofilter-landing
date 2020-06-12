@@ -7,7 +7,7 @@ export default {
     'NoFilter содержит <1> 3500 мест </ 1> по всему миру, и около <1> 30 новых фотографий добавляются каждую неделю </ 1>',
   featuresPrice: 'О ... Да ... И это <1> бесплатно </ 1> и доступно для <1> Android и iOS </ 1>',
   'Geolocation is not supported by this browser': 'Геолокация не поддерживается этим браузером',
-  'Getting spots...': 'Получение пятен ...',
+  'Getting photo locations': 'Получение фото локаций',
   'Getting your location...': 'Получение вашего местоположения ...',
   'Google Play Button': 'Кнопка Google Play',
   'Google Play QR Button': 'Кнопка Google Play QR',

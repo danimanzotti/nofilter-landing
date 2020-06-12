@@ -9,7 +9,7 @@ export default {
     'Oh ... Ya ... Dan itu <1> percuma </1>, dan tersedia untuk <1> Android dan iOS </1>',
   'Geolocation is not supported by this browser':
     'Geolokasi tidak disokong oleh penyemak imbas ini',
-  'Getting spots...': 'Mendapat tempat ...',
+  'Getting photo locations': 'Mendapatkan lokasi gambar',
   'Getting your location...': 'Mendapatkan lokasi anda ...',
   'Google Play Button': 'Butang Google Play',
   'Google Play QR Button': 'Butang QR Google Play',

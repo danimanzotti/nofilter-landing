@@ -9,7 +9,7 @@ export default {
     'Oh ... Evet ... Ve <1> ücretsiz </1> ve <1> Android ve iOS </1> için kullanılabilir',
   'Geolocation is not supported by this browser':
     'Coğrafi konum bu tarayıcı tarafından desteklenmiyor',
-  'Getting spots...': 'Noktalar alınıyor ...',
+  'Getting photo locations': 'Fotoğraf konumlarını alma',
   'Getting your location...': 'Konumunuz alınıyor ...',
   'Google Play Button': 'Google Play Düğmesi',
   'Google Play QR Button': 'Google Play QR Düğmesi',

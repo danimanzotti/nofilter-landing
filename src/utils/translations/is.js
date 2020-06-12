@@ -8,7 +8,7 @@ export default {
   featuresPrice: 'Ó ... Já ... Og það er <1> ókeypis </1>, og til í <1> Android og iOS </1>',
   'Geolocation is not supported by this browser':
     'Landfræðileg staðsetning er ekki studd af þessum vafra',
-  'Getting spots...': 'Að fá bletti ...',
+  'Getting photo locations': 'Að fá ljósmyndastaði',
   'Getting your location...': 'Sækir staðsetningu þína ...',
   'Google Play Button': 'Google Play hnappur',
   'Google Play QR Button': 'Google Play QR hnappur',

@@ -7,7 +7,7 @@ export default {
     'NoFilter sadrži <1> 3.500 mjesta </1> širom svijeta, a oko <1> 30 novih fotografija dodaje se svaki tjedan </1>',
   featuresPrice: 'Oh ... da ... I besplatno je <1> </1> i dostupan za <1> Android i iOS </1>',
   'Geolocation is not supported by this browser': 'Ovaj preglednik ne podržava geografsku lokaciju',
-  'Getting spots...': 'Dobivanje spotova ...',
+  'Getting photo locations': 'Dohvaćanje lokacija s fotografijama',
   'Getting your location...': 'Dohvaćanje vaše lokacije ...',
   'Google Play Button': 'Gumb Google Play',
   'Google Play QR Button': 'QR gumb Google Play',

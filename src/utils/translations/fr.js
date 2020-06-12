@@ -9,7 +9,7 @@ export default {
     "Oh ... Ouais ... Et c'est <1> gratuit </1>, et disponible pour <1> Android et iOS </1>",
   'Geolocation is not supported by this browser':
     "La géolocalisation n'est pas prise en charge par ce navigateur",
-  'Getting spots...': 'Obtenir des spots ...',
+  'Getting photo locations': 'Obtenir des emplacements de photos',
   'Getting your location...': 'Obtenir votre position ...',
   'Google Play Button': 'Bouton Google Play',
   'Google Play QR Button': 'Bouton Google Play QR',
