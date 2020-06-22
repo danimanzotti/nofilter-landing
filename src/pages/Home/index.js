@@ -105,24 +105,17 @@ const Home = () => {
 
   const getSpots = async ({ lat, lng, radius }) => {
     const baseUrl = 'https://us-central1-mari-a5cc7.cloudfunctions.net';
-    const r = await fetch(`${baseUrl}/api/v1/spots/radius/${radius}/${lat}/${lng}`);
+    const r = await fetch(`${baseUrl}/api/v1/spots/radius/${radius}/${lat}/${lng}/8`, {
+      headers: {
+        Authorization: 'Bearer 535dcd08-5964-4ce6-87fe-7bd3f7714e75',
+      },
+    });
     const { data } = await r.json();
     const spots = data.spots;
 
     if (spots.length === 8) {
       window.gtag('event', 'show_near_me_shown');
       setNearMeStatus(NEAR_ME_STATUS.SHOWING);
-
-      spots.forEach(spot => {
-        if (!spot.url.startsWith('http')) {
-          spot.url = spot.url
-            .replace('{1}', '&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=')
-            .replace('{2}', 'eyJhcHBfaWQiOjIzOTI1fQ&s=')
-            .replace('{3}', '?ixlib=rb-0.3.5');
-
-          spot.url = `https://images.unsplash.com/photo-${spot.url}`;
-        }
-      });
 
       setNearMeSpots(spots);
 

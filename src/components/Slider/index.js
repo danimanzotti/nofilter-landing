@@ -13,7 +13,7 @@ const Photo = ({ item }) => {
 
   return (
     <div className="photo-wrapper" onClick={handleClickOnPhoto}>
-      <div className="photo" style={{ backgroundImage: `url(${item.url})` }}>
+      <div className="photo" style={{ backgroundImage: `url(${item.photos[0].urls.regular})` }}>
         {showText && (
           <div className="want">{t("Want to see more? Download the app. It's free!")}</div>
         )}
@@ -26,7 +26,7 @@ const Slider = ({ items }) => {
   return (
     <div className="Slider">
       {items.map(item => (
-        <Photo key={item.url} item={item} />
+        <Photo key={item.id} item={item} />
       ))}
     </div>
   );
