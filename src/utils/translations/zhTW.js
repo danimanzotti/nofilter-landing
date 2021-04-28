@@ -3,7 +3,7 @@ export default {
   'App Store QR Button': 'App Store的QR按鈕',
   featuresQuality:
     '與其他應用程序不同的是，我們所有的照片都經過<1>深層質量控制</ 1>。不到1％的照片被批准',
-  featuresQuantity: 'NoFilter包含全球<1> 3,500個景點</ 1>，並且每周大約添加<1> 30張新照片</ 1>',
+  featuresQuantity: 'NoFilter包含全球<1> 5,000個景點</ 1>，並且每周大約添加<1> 30張新照片</ 1>',
   featuresPrice: '哦...是的... <1>免費</ 1>，可用於<1> Android和iOS </ 1>',
   'Geolocation is not supported by this browser': '此瀏覽器不支持地理位置',
   'Getting photo locations': '獲取照片位置',

@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     'Za razliku od drugih aplikacija, sve naše fotografije prolaze kroz <1> dubinsku kontrolu kvalitete </1>. Manje od 1% fotografija je odobreno',
   featuresQuantity:
-    'NoFilter sadrži <1> 3.500 mjesta </1> širom svijeta, a oko <1> 30 novih fotografija dodaje se svaki tjedan </1>',
+    'NoFilter sadrži <1> 5.000 mjesta </1> širom svijeta, a oko <1> 30 novih fotografija dodaje se svaki tjedan </1>',
   featuresPrice: 'Oh ... da ... I besplatno je <1> </1> i dostupan za <1> Android i iOS </1>',
   'Geolocation is not supported by this browser': 'Ovaj preglednik ne podržava geografsku lokaciju',
   'Getting photo locations': 'Dohvaćanje lokacija s fotografijama',

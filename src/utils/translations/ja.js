@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     '他のアプリとは異なり、すべての写真は<1>詳細な品質管理</ 1>を経ています。写真の1％未満が承認されました',
   featuresQuantity:
-    'NoFilterには世界中に<1> 3,500スポット</ 1>が含まれており、<1>毎週約30枚の新しい写真が追加されます</ 1>',
+    'NoFilterには世界中に<1> 5,000スポット</ 1>が含まれており、<1>毎週約30枚の新しい写真が追加されます</ 1>',
   featuresPrice: 'ああ...ええ...そして<1>無料</ 1>で、<1> AndroidとiOS </ 1>で利用可能です',
   'Geolocation is not supported by this browser': 'このブラウザは位置情報をサポートしていません',
   'Getting photo locations': '写真の場所を取得しています',

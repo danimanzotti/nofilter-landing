@@ -227,7 +227,7 @@ const Home = () => {
               <h3>{t('Quantity')}</h3>
               <div className="text">
                 <Trans i18nKey="featuresQuantity">
-                  NoFilter contains <b>3,500 spots</b> around the world, and{' '}
+                  NoFilter contains <b>5,000 spots</b> around the world, and{' '}
                   <b>~30 new photos are added every week</b>
                 </Trans>
               </div>

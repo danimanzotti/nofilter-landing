@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     "A diferència d'altres aplicacions, totes les nostres fotos passen per un <1> control de qualitat profund </1>. Menys de l’1% de les fotos estan aprovades",
   featuresQuantity:
-    'NoFilter conté <1> 3.500 llocs </1> arreu del món, i al voltant de <1> 30 fotos noves s’afegeixen cada setmana </1>',
+    'NoFilter conté <1> 5.000 llocs </1> arreu del món, i al voltant de <1> 30 fotos noves s’afegeixen cada setmana </1>',
   featuresPrice:
     'Oh ... Sí ... I és <1> gratuït </1>, i està disponible per a <1> Android i iOS </1>',
   'Geolocation is not supported by this browser':

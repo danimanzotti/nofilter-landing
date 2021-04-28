@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     'Ólíkt öðrum forritum fara allar myndir okkar í gegnum <1> djúpt gæðaeftirlit </1>. Minna en 1% myndanna eru samþykktar',
   featuresQuantity:
-    'NoFilter inniheldur <1> 3.500 blettir </1> um allan heim og um það bil <1> 30 nýjar myndir eru bætt við í hverri viku </1>',
+    'NoFilter inniheldur <1> 5.000 blettir </1> um allan heim og um það bil <1> 30 nýjar myndir eru bætt við í hverri viku </1>',
   featuresPrice: 'Ó ... Já ... Og það er <1> ókeypis </1>, og til í <1> Android og iOS </1>',
   'Geolocation is not supported by this browser':
     'Landfræðileg staðsetning er ekki studd af þessum vafra',

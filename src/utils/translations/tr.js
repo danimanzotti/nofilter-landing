@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     "Diğer uygulamalardan farklı olarak, tüm fotoğraflarımız <1> derin kalite kontrolünden </1> geçer. Fotoğrafların% 1'inden azı onaylandı",
   featuresQuantity:
-    'NoFilter dünyada <1> 3.500 nokta </1> içeriyor ve her hafta yaklaşık <1> 30 yeni fotoğraf ekleniyor </1>',
+    'NoFilter dünyada <1> 5.000 nokta </1> içeriyor ve her hafta yaklaşık <1> 30 yeni fotoğraf ekleniyor </1>',
   featuresPrice:
     'Oh ... Evet ... Ve <1> ücretsiz </1> ve <1> Android ve iOS </1> için kullanılabilir',
   'Geolocation is not supported by this browser':

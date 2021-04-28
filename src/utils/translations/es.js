@@ -2,9 +2,9 @@ export default {
   'App Store Button': 'Botón de la tienda de aplicaciones',
   'App Store QR Button': 'Botón QR de la tienda de aplicaciones',
   featuresQuality:
-    'A diferencia de otras aplicaciones, todas nuestras fotos pasan por un <1> control de calidad profundo </1>. Menos del 1% de las fotos están aprobadas',
+    'A diferencia de otras aplicaciones, todas nuestras fotos pasan por un <1> control de calidad profundo </1>. Menos del 1% de las fotos son aprobadas',
   featuresQuantity:
-    'NoFilter contiene <1> 3,500 puntos </1> en todo el mundo, y se agregan alrededor de <1> 30 fotos nuevas cada semana </1>',
+    'NoFilter contiene <1> 5,000 puntos </1> en todo el mundo, y se agregan alrededor de <1> 30 fotos nuevas cada semana </1>',
   featuresPrice:
     'Oh ... Sí ... Y es <1> gratis </1>, y está disponible para <1> Android e iOS </1>',
   'Geolocation is not supported by this browser':
