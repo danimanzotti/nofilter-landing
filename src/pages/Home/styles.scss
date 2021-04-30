@@ -3,6 +3,7 @@
     height: 450px;
     display: flex;
     position: relative;
+    z-index: 2;
 
     @media (max-width: 862px) {
       height: auto;
