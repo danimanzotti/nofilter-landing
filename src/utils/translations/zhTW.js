@@ -3,7 +3,7 @@ export default {
   'App Store QR Button': 'App Store的QR按鈕',
   featuresQuality:
     '與其他應用程序不同的是，我們所有的照片都經過<1>深層質量控制</ 1>。不到1％的照片被批准',
-  featuresQuantity: 'NoFilter包含全球<1> 5,000個景點</ 1>，並且每周大約添加<1> 30張新照片</ 1>',
+  featuresQuantity: 'NoFilter包含全球<1> 5,000個景點</ 1>，並且每周大約添加<1> 100張新照片</ 1>',
   featuresPrice: '哦...是的... <1>免費</ 1>，可用於<1> Android和iOS </ 1>',
   'Geolocation is not supported by this browser': '此瀏覽器不支持地理位置',
   'Getting photo locations': '獲取照片位置',
@@ -23,6 +23,6 @@ export default {
   titlePhotographers: '對於<1>攝影師</ 1>誰想要發現附近最好的照片點<1> </ 1>',
   titleTravelers: '對於<1>旅行者</ 1>誰想要發現世界上最好的拍照地點<1> </ 1>',
   "Want to see more? Download the app. It's free!": '想看更多？下載應用程序。免費！',
-  "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!":
+  noLocationPermission:
     '您的瀏覽器不想告訴我們您的位置:(請從您的PC嘗試，或者只是在手機中下載NoFilter並進行實際嘗試！',
 };

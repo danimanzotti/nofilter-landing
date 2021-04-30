@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     'Ólíkt öðrum forritum fara allar myndir okkar í gegnum <1> djúpt gæðaeftirlit </1>. Minna en 1% myndanna eru samþykktar',
   featuresQuantity:
-    'NoFilter inniheldur <1> 5.000 blettir </1> um allan heim og um það bil <1> 30 nýjar myndir eru bætt við í hverri viku </1>',
+    'NoFilter inniheldur <1> 5.000 blettir </1> um allan heim og um það bil <1> 100 nýjar myndir eru bætt við í hverri viku </1>',
   featuresPrice: 'Ó ... Já ... Og það er <1> ókeypis </1>, og til í <1> Android og iOS </1>',
   'Geolocation is not supported by this browser':
     'Landfræðileg staðsetning er ekki studd af þessum vafra',
@@ -28,6 +28,6 @@ export default {
   titleTravelers:
     'Fyrir <1> ferðamenn </1> sem vilja uppgötva bestu ljósmyndabletti <1> um allan heim </1>',
   "Want to see more? Download the app. It's free!": 'Viltu sjá meira? Sæktu appið. Það er ókeypis!',
-  "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!":
+  noLocationPermission:
     'Vafrinn þinn vill ekki gefa okkur stöðu þína :( prófaðu úr tölvunni þinni, eða sæktu bara NoFilter í símann þinn og prófaðu það fyrir alvöru!',
 };

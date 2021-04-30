@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     "Diğer uygulamalardan farklı olarak, tüm fotoğraflarımız <1> derin kalite kontrolünden </1> geçer. Fotoğrafların% 1'inden azı onaylandı",
   featuresQuantity:
-    'NoFilter dünyada <1> 5.000 nokta </1> içeriyor ve her hafta yaklaşık <1> 30 yeni fotoğraf ekleniyor </1>',
+    'NoFilter dünyada <1> 5.000 nokta </1> içeriyor ve her hafta yaklaşık <1> 100 yeni fotoğraf ekleniyor </1>',
   featuresPrice:
     'Oh ... Evet ... Ve <1> ücretsiz </1> ve <1> Android ve iOS </1> için kullanılabilir',
   'Geolocation is not supported by this browser':
@@ -30,6 +30,6 @@ export default {
     'Dünyanın en iyi fotoğraf noktalarını <1> keşfetmek isteyen <1> gezginler </1> </1> için',
   "Want to see more? Download the app. It's free!":
     'Daha fazlasını görmek ister misiniz? Uygulamayı indirin. Bedava!',
-  "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!":
+  noLocationPermission:
     "Tarayıcınız bize konumunuzu vermek istemiyor :( PC'nizden deneyin veya sadece NoFilter'ı telefonunuza indirin ve gerçek için deneyin!",
 };

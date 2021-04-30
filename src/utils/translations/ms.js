@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     'Tidak seperti aplikasi lain, semua foto kami melalui <1> kawalan kualiti mendalam </1>. Kurang daripada 1% foto diluluskan',
   featuresQuantity:
-    'NoFilter berisi <1> 5.000 tempat </1> di seluruh dunia, dan sekitar <1> 30 foto baru ditambahkan setiap minggu </1>',
+    'NoFilter berisi <1> 5.000 tempat </1> di seluruh dunia, dan sekitar <1> 100 foto baru ditambahkan setiap minggu </1>',
   featuresPrice:
     'Oh ... Ya ... Dan itu <1> percuma </1>, dan tersedia untuk <1> Android dan iOS </1>',
   'Geolocation is not supported by this browser':
@@ -30,6 +30,6 @@ export default {
     'Bagi <1> pelancong </1> yang ingin menemui tempat foto terbaik <1> di seluruh dunia </1>',
   "Want to see more? Download the app. It's free!":
     'Ingin melihat lebih banyak? Muat turun aplikasi. Ianya percuma!',
-  "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!":
+  noLocationPermission:
     'Penyemak imbas anda tidak mahu memberi kami kedudukan anda :( cuba dari PC anda, atau hanya memuat turun NoFilter di telefon anda dan mencubanya secara sebenar!',
 };

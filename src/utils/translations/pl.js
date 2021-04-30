@@ -4,7 +4,7 @@ export default {
   featuresQuality:
     'W przeciwieństwie do innych aplikacji, wszystkie nasze zdjęcia przechodzą <1> szczegółową kontrolę jakości </1>. Zatwierdzono mniej niż 1% zdjęć',
   featuresQuantity:
-    'NoFilter zawiera <1> 3500 miejsc </1> na całym świecie, a około <1> co tydzień dodaje się 30 nowych zdjęć </1>',
+    'NoFilter zawiera <1> 3500 miejsc </1> na całym świecie, a około <1> co tydzień dodaje się 100 nowych zdjęć </1>',
   featuresPrice: 'Och ... Tak ... I jest <1> bezpłatny </1> i dostępny dla <1> Androida i iOS </1>',
   'Geolocation is not supported by this browser':
     'Geolokalizacja nie jest obsługiwana przez tę przeglądarkę',
@@ -29,6 +29,6 @@ export default {
     'Dla <1> podróżników </1>, którzy chcą odkryć najlepsze miejsca na zdjęcia <1> na całym świecie </1>',
   "Want to see more? Download the app. It's free!":
     'Chcę zobaczyć więcej? Pobierz aplikację. Jest wolne!',
-  "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!":
+  noLocationPermission:
     'Twoja przeglądarka nie chce podać nam Twojej pozycji :( spróbuj z komputera lub po prostu pobierz NoFilter na swój telefon i wypróbuj go naprawdę!',
 };
