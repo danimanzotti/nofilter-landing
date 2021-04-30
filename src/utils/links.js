@@ -14,3 +14,14 @@ export const getOutboundLink = (url, event) => {
     },
   });
 };
+
+export const catchQRDownloadEvent = {
+  timeout: null,
+  onMouseEnter: () => {
+    clearTimeout(catchQRDownloadEvent.timeout);
+    catchQRDownloadEvent.timeout = setTimeout(() => {
+      window.gtag('event', 'download_app_qr');
+    }, 3000);
+  },
+  onMouseLeave: () => clearTimeout(catchQRDownloadEvent.timeout),
+};
