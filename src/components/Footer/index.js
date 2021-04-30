@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="footer">
       <div className="content-wrapper">
@@ -20,7 +22,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="copyright">© 2020 NoFilter</div>
+        <div className="copyright">© {currentYear} NoFilter</div>
       </div>
     </div>
   );
