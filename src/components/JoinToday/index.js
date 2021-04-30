@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { getOutboundLink } from '../../utils/links';
+import { getOutboundLink, catchQRDownloadEvent } from '../../utils/links';
 import './styles.scss';
 
 const JoinToday = () => {
@@ -9,10 +9,10 @@ const JoinToday = () => {
   return (
     <div className="JoinToday">
       <div className="content-wrapper">
-        <h2>{t('Join NoFilter today')}</h2>
+        <h2>{t('Join NoFilter today')}!</h2>
 
         <div className="app-store-buttons-wrapper">
-          <div className="app-store-button apple-store">
+          <div className="app-store-button apple-store" {...catchQRDownloadEvent}>
             <a
               href="https://apps.apple.com/app/nofilter-photo-spots/id1445583976"
               onClick={() =>
@@ -29,7 +29,7 @@ const JoinToday = () => {
             </a>
           </div>
 
-          <div className="app-store-button google-play">
+          <div className="app-store-button google-play" {...catchQRDownloadEvent}>
             <a
               href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter"
               onClick={() =>

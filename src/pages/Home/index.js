@@ -3,7 +3,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import Slider from '../../components/Slider';
 import JoinToday from '../../components/JoinToday';
 import useInterval from '../../hooks/useInterval';
-import { getOutboundLink } from '../../utils/links';
+import { getOutboundLink, catchQRDownloadEvent } from '../../utils/links';
 import STATIC_EXAMPLES from './staticExamples';
 import './styles.scss';
 
@@ -90,15 +90,16 @@ const Home = () => {
             radius = radius * 5;
           }
         } while (!isOk && radius < 20000);
+
+        window.gtag('event', 'show_near_me_shown');
       },
       () => {
         setNearMeStatus(NEAR_ME_STATUS.INIT);
         window.gtag('event', 'show_near_me_error');
-        window.alert(
-          t(
-            "Your browser doesn't want to give us your position :( try from your PC, or just download NoFilter in your phone and try it for real!"
-          )
-        );
+        window.alert(t('noLocationPermission'));
+      },
+      {
+        timeout: 3000,
       }
     );
   };
@@ -114,7 +115,6 @@ const Home = () => {
     const spots = data.spots;
 
     if (spots.length === 8) {
-      window.gtag('event', 'show_near_me_shown');
       setNearMeStatus(NEAR_ME_STATUS.SHOWING);
 
       setNearMeSpots(spots);
@@ -142,7 +142,7 @@ const Home = () => {
             </h1>
 
             <div className="app-store-buttons-wrapper">
-              <div className="app-store-button apple-store">
+              <div className="app-store-button apple-store" {...catchQRDownloadEvent}>
                 <a
                   href="https://apps.apple.com/app/nofilter-photo-spots/id1445583976"
                   onClick={() =>
@@ -159,7 +159,7 @@ const Home = () => {
                 </a>
               </div>
 
-              <div className="app-store-button google-play">
+              <div className="app-store-button google-play" {...catchQRDownloadEvent}>
                 <a
                   href="https://play.google.com/store/apps/details?id=app.no_filter.nofilter"
                   onClick={() =>
