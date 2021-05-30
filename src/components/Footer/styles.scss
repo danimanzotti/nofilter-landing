@@ -1,5 +1,7 @@
 /***** Footer Styles *****/
 
+$breakpoint: 700px;
+
 .footer {
   background-color: #000;
   color: #fff;
@@ -7,7 +9,7 @@
   padding: 32px 0;
   border-top: 1px solid #969696;
 
-  @media (max-width: 650px) {
+  @media (max-width: $breakpoint) {
     padding: 40px;
   }
 
@@ -15,14 +17,14 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 650px) {
+    @media (max-width: $breakpoint) {
       display: block;
       text-align: center;
     }
   }
 
   .bottom-navigation {
-    @media (max-width: 650px) {
+    @media (max-width: $breakpoint) {
       margin-bottom: 40px;
     }
 
@@ -31,7 +33,7 @@
         display: inline;
         margin-right: 32px;
 
-        @media (max-width: 650px) {
+        @media (max-width: $breakpoint) {
           display: block;
           text-align: center;
           margin: 0 0 16px;

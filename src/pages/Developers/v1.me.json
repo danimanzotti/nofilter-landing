@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "data": {
+    "me": {
+      "id": "59645964-59645964-59645964-59645964",
+      "token": "535dcd08-535dcd08-535dcd08-535dcd08",
+      "email": "brodanoel@gmail.com",
+      "isBanned": false,
+      "limit": 100,
+      "calls": [
+        {
+          "madeAt": 1622404995456,
+          "endpoint": "/v1/spots/random"
+        }
+      ]
+    }
+  }
+}

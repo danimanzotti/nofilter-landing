@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "data": {
+    "spot": {
+      "id": "24eb8c3d-2d19-48ec-9662-0f5dd83680e6",
+      "lat": 40.741081,
+      "lng": -73.989505,
+      "name": "Flatiron Building",
+      "from": "Ground",
+      "photos": [
+        {
+          "id": "CD77IVUf37A",
+          "urls": {
+            "regular": "https://images.unsplash.com/photo-1451191703739-5c2ad91bf6af?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=eyJhcHBfaWQiOjIzOTI1fQ&s=cc808bdec3648512aa24c6b1e9703536"
+          }
+        },
+        {
+          "id": "3mztsjNIg5c",
+          "urls": {
+            "regular": "https://images.unsplash.com/photo-1536008601945-bfaa685086f3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=eyJhcHBfaWQiOjIzOTI1fQ"
+          }
+        }
+      ]
+    }
+  }
+}
