@@ -33,6 +33,9 @@ const Developers = () => {
               <h3>Menu</h3>
               <ul>
                 <li>
+                  <a href="#baseUrl">Base URL</a>
+                </li>
+                <li>
                   <a href="#error">Error Responses</a>
                 </li>
                 <li>
@@ -42,6 +45,31 @@ const Developers = () => {
                   <a href="#/v1/spots/random">GET: /v1/spots/random</a>
                 </li>
               </ul>
+            </div>
+            <div id="baseUrl" className="Developers__endpoint">
+              <h3>Base URL</h3>
+
+              <p>
+                <input
+                  readOnly
+                  type="text"
+                  value="https://us-central1-mari-a5cc7.cloudfunctions.net/api"
+                />
+              </p>
+
+              <p>Example</p>
+              <div className="Developers__js">
+                {`const noFilterBaseUrl = 'https://us-central1-mari-a5cc7.cloudfunctions.net/api';
+fetch(\`\${noFilterBaseUrl}/v1/spots/random\`, {
+  method: 'GET',
+  headers: {
+    Accept: 'application/json',
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer ${user.token}',
+  },
+});`}
+              </div>
             </div>
             <div id="error" className="Developers__endpoint">
               <h3>Any Error Response</h3>
@@ -70,8 +98,6 @@ const Developers = () => {
                 {JSON.stringify(require('./v1.spots.random.json'), null, 2)}
               </div>
             </div>
-            <br />
-            <br />
           </>
         ) : (
           <Fragment>

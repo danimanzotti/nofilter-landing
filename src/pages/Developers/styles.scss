@@ -15,7 +15,7 @@
   &__endpoint {
     background-color: #eee;
     padding: 16px;
-    margin: 20px 0;
+    margin: 50px 0;
     border-radius: 3px;
 
     h3 {
@@ -37,10 +37,11 @@
     }
   }
 
-  &__json {
+  &__json,
+  &__js {
     width: 100%;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     padding: 8px;
     background-color: #ccc;
     border-radius: 3px;
