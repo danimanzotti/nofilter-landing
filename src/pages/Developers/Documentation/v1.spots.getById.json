@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "data": {
+    "spot": {
+      "id": "8933d790-6fe7-4cdb-a576-cfc1145ae255",
+      "lat": 48.859422,
+      "lng": 2.29473,
+      "name": "Eiffel Tower",
+      "from": "Ground",
+      "photos": [
+        {
+          "id": "HBANPxXi3aQ",
+          "urls": {
+            "regular": "https://images.unsplash.com/photo-1458262488536-98366625ae59?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=eyJhcHBfaWQiOjIzOTI1fQ&s=6e3ea5479ec1be04127110e58768461f"
+          }
+        },
+        {
+          "id": "pOXT11h9TF8",
+          "urls": {
+            "regular": "https://images.unsplash.com/photo-1567370291576-48d25768efb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=eyJhcHBfaWQiOjIzOTI1fQ"
+          }
+        }
+      ]
+    }
+  }
+}

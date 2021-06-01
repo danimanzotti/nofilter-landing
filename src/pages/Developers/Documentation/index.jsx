@@ -20,6 +20,20 @@ const Documentation = ({ user }) => {
           <li>
             <a href="#/v1/spots/random">GET: /v1/spots/random</a>
           </li>
+          <li>
+            <a href="#/v1/spots/search/:query">GET: /v1/spots/search/:query</a>
+          </li>
+          <li>
+            <a href="#/v1/spots/getByArea/:radius/:lat/:lng/:limit">
+              GET: /v1/spots/getByArea/:radius/:lat/:lng/:limit
+            </a>
+          </li>
+          <li>
+            <a href="#/v1/spots/getNearest/:lat/:lng">GET: /v1/spots/getNearest/:lat/:lng</a>
+          </li>
+          <li>
+            <a href="#/v1/spots/getById/:id">GET: /v1/spots/getById/:id</a>
+          </li>
         </ul>
       </div>
       <div id="baseUrl" className="Documentation__endpoint">
@@ -36,7 +50,7 @@ const Documentation = ({ user }) => {
         <p>Example</p>
         <div className="Documentation__js">
           {`const noFilterBaseUrl = 'https://us-central1-mari-a5cc7.cloudfunctions.net/api';
-fetch(\`\${noFilterBaseUrl}/v1/spots/random\`, {
+fetch(\`\${noFilterBaseUrl}/v1/spots/getNearest/51.53123/-0.12412\`, {
   method: 'GET',
   headers: {
     Accept: 'application/json',
@@ -72,6 +86,45 @@ fetch(\`\${noFilterBaseUrl}/v1/spots/random\`, {
 
         <div className="Documentation__json">
           {JSON.stringify(require('./v1.spots.random.json'), null, 2)}
+        </div>
+      </div>
+      <div id="/v1/spots/search/:query" className="Documentation__endpoint">
+        <h3>GET: /v1/spots/search/:query</h3>
+
+        <p>Retrieve a list of Spots that matches with the search Query parameter.</p>
+
+        <div className="Documentation__json">
+          {JSON.stringify(require('./v1.spots.search.json'), null, 2)}
+        </div>
+      </div>
+      <div id="/v1/spots/getByArea/:radius/:lat/:lng/:limit" className="Documentation__endpoint">
+        <h3>GET: /v1/spots/getByArea/:radius/:lat/:lng/:limit</h3>
+
+        <p>
+          Retrieve a list of Spots that are present in the area provided (defined by Lat, Lng, and
+          Radius).
+        </p>
+
+        <div className="Documentation__json">
+          {JSON.stringify(require('./v1.spots.getByArea.json'), null, 2)}
+        </div>
+      </div>
+      <div id="/v1/spots/getNearest/:lat/:lng" className="Documentation__endpoint">
+        <h3>GET: /v1/spots/getNearest/:lat/:lng</h3>
+
+        <p>Retrieve the Spot nearest to a defined coordinate.</p>
+
+        <div className="Documentation__json">
+          {JSON.stringify(require('./v1.spots.getNearest.json'), null, 2)}
+        </div>
+      </div>
+      <div id="/v1/spots/getById/:id" className="Documentation__endpoint">
+        <h3>GET: /v1/spots/getById/:id</h3>
+
+        <p>Retrieve a Spot by ID</p>
+
+        <div className="Documentation__json">
+          {JSON.stringify(require('./v1.spots.getById.json'), null, 2)}
         </div>
       </div>
     </div>

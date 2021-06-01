@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "data": {
+    "spots": [
+      {
+        "id": "f99c5a80-687a-46d3-ac3b-b0c26ce058d3",
+        "lat": 51.50806,
+        "lng": -0.127489,
+        "name": "Trafalgar Square",
+        "from": "",
+        "photos": [
+          {
+            "id": "nmC6P7XAxNs",
+            "urls": {
+              "regular": "https://images.unsplash.com/photo-1572356722575-ff3eab05de4c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=512&fit=max&ixid=eyJhcHBfaWQiOjIzOTI1fQ"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
