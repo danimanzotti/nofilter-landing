@@ -19,12 +19,12 @@ const Developers = () => {
               <input readOnly type="text" value={user.token} />
             </div>
             <div className="Developers__block">
-              <b>Your limits</b>
+              <b>Your current limits</b>
               <br />
               {user.limit} calls/24hs
             </div>
             <br />
-            Any question/help/feedback? Get in contact with{' '}
+            Any question/help/feedback? You need to extend the limits? Get in contact with{' '}
             <a href="mailto:hello@no-filter.app">hello@no-filter.app</a>
             <br />
             <br />
