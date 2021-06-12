@@ -11,7 +11,9 @@ const JoinToday = () => {
       <div className="content-wrapper">
         <h2>{t('Join NoFilter today')}!</h2>
 
-        <Download />
+        <div className="JoinToday__download-wrapper">
+          <Download />
+        </div>
       </div>
     </div>
   );

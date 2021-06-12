@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import c from 'classnames';
-import NeedAccess from 'components/NeedAccess';
+import JoinToday from 'components/JoinToday';
 import Download from 'components/Download';
 import actions from 'actions';
 import './styles.scss';
@@ -14,11 +13,10 @@ const TABS = {
 };
 
 const PublicProfile = ({ match }) => {
-  const { t } = useTranslation();
   const username = match.params.username;
   const [user, setUser] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [isClicked, setIsClicked] = useState(false);
+  const [clicked, setClicked] = useState({});
   const [currentTab, setCurrentTab] = useState(TABS.MY_SPOTS);
 
   useEffect(() => {
@@ -38,9 +36,8 @@ const PublicProfile = ({ match }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-    setIsClicked(true);
+  const handleClick = file => {
+    setClicked({ ...clicked, [file]: true });
   };
 
   if (isLoading) {
@@ -105,27 +102,28 @@ const PublicProfile = ({ match }) => {
         </div>
 
         <div className="PublicProfile__content">
-          {currentTab !== TABS.MY_SPOTS && <NeedAccess />}
+          {currentTab !== TABS.MY_SPOTS && <JoinToday />}
           {currentTab === TABS.MY_SPOTS && (
             <>
               <div className="PublicProfile__photos">
                 {user.photos.length > 0 &&
-                  !isClicked &&
                   user.photos.map(x => (
                     <div
                       key={x.file}
-                      className="PublicProfile__photo"
-                      onClick={handleClick}
+                      className={c('PublicProfile__photo', {
+                        'PublicProfile__photo--clicked': clicked[x.file],
+                      })}
+                      onClick={() => handleClick(x.file)}
                       style={{
                         backgroundImage: `url(https://storage.googleapis.com/mari-a5cc7.appspot.com/photos/regular/${x.file})`,
                       }}
-                    ></div>
+                    >
+                      {clicked[x.file] && <Download />}
+                    </div>
                   ))}
               </div>
 
-              {isClicked && <div className="PublicProfile__join">{t('Join NoFilter today')}!</div>}
-
-              <Download />
+              <JoinToday />
             </>
           )}
         </div>

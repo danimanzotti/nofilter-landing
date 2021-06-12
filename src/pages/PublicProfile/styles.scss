@@ -1,6 +1,12 @@
 .PublicProfile {
   padding-bottom: 60px;
 
+  .Download {
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+  }
+
   &__header {
     display: flex;
     justify-content: flex-start;
@@ -85,9 +91,11 @@
   &__photos {
     display: flex;
     flex-wrap: wrap;
+    background-color: #000;
   }
 
   &__photo {
+    position: relative;
     width: 25%;
     padding-top: 25%;
     background-position: center;
@@ -98,16 +106,19 @@
       width: 50%;
       padding-top: 50%;
     }
-  }
 
-  &__join {
-    text-align: center;
-    margin: 16px auto 0;
-  }
+    .Download {
+      margin-top: 0 !important;
+      width: 90% !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      flex-direction: column;
 
-  .Download {
-    margin: 0 auto;
-    width: 300px;
-    max-width: 100%;
+      .qr {
+        display: none;
+      }
+    }
   }
 }
