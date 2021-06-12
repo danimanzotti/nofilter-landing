@@ -1,0 +1,113 @@
+.PublicProfile {
+  padding-bottom: 60px;
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0;
+
+    @media (max-width: 425px) {
+      padding: 16px 0;
+    }
+  }
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+
+    @media (max-width: 425px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__data {
+    padding-left: 30px;
+
+    @media (max-width: 425px) {
+      padding-left: 16px;
+    }
+  }
+
+  &__username {
+    font-size: 30px;
+
+    @media (max-width: 425px) {
+      font-size: 18px;
+    }
+  }
+
+  &__followers {
+    font-size: 18px;
+    margin-top: 8px;
+
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+  }
+
+  &__tab {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: 0.1s ease-in;
+
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
+
+    &.active {
+      border-bottom-color: #000;
+    }
+  }
+
+  &__content {
+    padding-top: 20px;
+
+    .Download {
+      margin-top: 16px !important;
+    }
+  }
+
+  &__photos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__photo {
+    width: 25%;
+    padding-top: 25%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    @media (max-width: 700px) {
+      width: 50%;
+      padding-top: 50%;
+    }
+  }
+
+  &__join {
+    text-align: center;
+    margin: 16px auto 0;
+  }
+
+  .Download {
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+  }
+}

@@ -7,6 +7,7 @@ import PrivacyPolicy from 'pages/PrivacyPolicy';
 import TermsOfUse from 'pages/TermsOfUse';
 import Contact from 'pages/Contact';
 import Developers from 'pages/Developers';
+import PublicProfile from 'pages/PublicProfile';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import './styles/reseter.css';
@@ -51,6 +52,7 @@ function App() {
             return <a href={url}>Redirecting to Google Play...</a>;
           }}
         />
+        <Route path="/:username" component={PublicProfile} />
         <Route path="/" component={Home} />
       </Switch>
 

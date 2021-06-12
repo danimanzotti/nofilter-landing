@@ -17,20 +17,17 @@
     }
   }
 
-  .app-store-buttons-wrapper {
-    display: flex;
-    justify-content: center;
-  }
+  .Download {
+    &__button {
+      height: 50px;
 
-  .app-store-button {
-    height: 50px;
+      @media (max-width: 760px) {
+        height: 40px;
+      }
 
-    @media (max-width: 760px) {
-      height: 40px;
+      &.google-play {
+        margin-left: 32px;
+      }
     }
-  }
-
-  .google-play {
-    margin-left: 32px;
   }
 }
