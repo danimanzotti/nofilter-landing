@@ -38,6 +38,11 @@ const PublicProfile = ({ match }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    setIsClicked(true);
+  };
+
   if (isLoading) {
     return (
       <div className="PublicProfile">
@@ -110,7 +115,7 @@ const PublicProfile = ({ match }) => {
                     <div
                       key={x.file}
                       className="PublicProfile__photo"
-                      onClick={() => setIsClicked(true)}
+                      onClick={handleClick}
                       style={{
                         backgroundImage: `url(https://storage.googleapis.com/mari-a5cc7.appspot.com/photos/regular/${x.file})`,
                       }}
