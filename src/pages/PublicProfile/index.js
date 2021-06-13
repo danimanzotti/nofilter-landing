@@ -13,13 +13,15 @@ const TABS = {
 };
 
 const PublicProfile = ({ match }) => {
-  const username = match.params.username;
+  const username = match.params.username.toLowerCase();
   const [user, setUser] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [clicked, setClicked] = useState({});
   const [currentTab, setCurrentTab] = useState(TABS.MY_SPOTS);
 
   useEffect(() => {
+    window.location = `nofilter://user/${username}`;
+
     (async () => {
       try {
         const { user } = await actions.users.get({ username });
