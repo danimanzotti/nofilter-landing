@@ -20,7 +20,9 @@ const PublicProfile = ({ match }) => {
   const [currentTab, setCurrentTab] = useState(TABS.MY_SPOTS);
 
   useEffect(() => {
-    window.location = `nofilter://user/${username}`;
+    try {
+      window.location = `nofilter://user/${username}`;
+    } catch (e) {}
 
     (async () => {
       try {
