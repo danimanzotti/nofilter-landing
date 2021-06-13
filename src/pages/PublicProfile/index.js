@@ -21,7 +21,7 @@ const PublicProfile = ({ match }) => {
 
   useEffect(() => {
     try {
-      window.location = `nofilter://user/${username}`;
+      window.location = `nofilter://user?username=${username}`;
     } catch (e) {}
 
     (async () => {
